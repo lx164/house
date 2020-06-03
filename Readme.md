@@ -6,7 +6,7 @@
 [![image](https://img.shields.io/badge/author-lx164-orange.svg)](https://github.com/lx164/) [![image](https://img.shields.io/badge/CSDN-lx9625_鹤鹤-orange.svg)](https://blog.csdn.net/github_38967228) [![image](https://img.shields.io/badge/博客园-LiangSenCheng小森森-orange.svg)](https://www.cnblogs.com/LiangSenCheng/)
 
 
-项目地址：https://github.com/lx164/
+项目地址：https://github.com/lx164/house
 
 > 发现有问题？欢迎加我微信一起探讨，或者直接提Issues
 > 无法下载或者下载太慢？可以直接找我要安装包；
@@ -69,8 +69,8 @@
 
 ## 配置过程
 
-1. 直接下载源码,源码地址：https://github.com/lx164
-或者clone项目 git clone https://github.com/lx164/
+1. 直接下载源码,源码地址：https://github.com/lx164/house
+或者clone项目 git clone https://github.com/lx164/house.git
 
 2. 打开微信开发者工具，导入项目（导入的时候请选择 APP 文件夹）；
 
