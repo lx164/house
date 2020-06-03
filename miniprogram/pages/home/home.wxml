@@ -1,0 +1,72 @@
+<!--pages/home/home.wxml-->
+<!-- 功能选项a -->
+<view class="select-box">
+	<view data-url="../../Companypackage/newHouse/newHouse" bindtap="Navigate">
+		<image src="../image/newHouse.png"></image>
+	</view>
+	<view data-url="../../Companypackage/secondHandHouse/secondHandHouse" bindtap="Navigate">
+		<image src="../image/secondHand.png"></image>
+	</view>
+	<view data-url="../../Companypackage/rentingHouse/rentingHouse" bindtap="Navigate">
+		<image src="../image/rentinghouse.png"></image>
+	</view>
+</view>
+
+<!-- 功能选项b -->
+<view class="header-box">
+	<view class="header-row">
+		<view class="header-cell" wx:for="{{headerList}}" wx:key='key' data-url="{{item.url}}" bindtap="Navigate">
+			<view>
+				<image src="{{item.icon}}"></image>
+			</view>
+			<view class="font-size-12 text-color">{{item.text}}</view>
+		</view>
+	</view>
+</view>
+
+<!-- bannner -->
+<view class="banner-box">
+	<image src="../image/banner.png"></image>
+</view>
+
+<!-- 公告 -->
+<view class="noticeBar-box">
+	<van-notice-bar class="noticeBar" left-icon="volume-o" color="#181818;" backgroundColor="#ffffff" text="{{notice}}" />
+</view>
+
+<view class="recommendation-box">
+	<view class="recommendation-text">店长推荐</view>
+</view>
+
+<!-- 推荐列表 -->
+<view class="recommendation-list-box" wx:for="{{HouseList}}" wx:key='key' data-url="{{item.url}}" data-id="{{item._id}}" bindtap="NavigateToDetail">
+	<view class="card">
+		<view class="card-left">
+			<image mode="scaleToFill" src="{{item.photoInfo[0]}}"></image>
+			<view class="card-tag-box card-tag card-tag-mark card-tag-bg">推荐</view>
+		</view>
+		<view class="card-right">
+			<view class="card-title">{{item.title}}</view>
+			<view class="card-content-box">
+
+				<view class="card-content-box-row-top">
+					<view class="content-row">
+						<view class="float-left font-weight">{{item.FormData.roomStyle}} {{item.FormData.area}}㎡</view>
+						<view class="float-right price-text">{{item.FormData.totalPrice}}{{item.EntrustType=='sale'?'万':'元/月'}}</view>
+					</view>
+					<view class="content-row">
+						<view class="float-left text-grey">{{item.FormData.location}}</view>
+						<view class="float-right text-grey">{{item.EntrustType=='sale'?item.FormData.averagePrice:''}}{{item.EntrustType=='sale'?'元/㎡':''}}</view>
+					</view>
+				</view>
+
+				<view class="card-content-box-row-bottom">
+					<view class="content-tag bg-tag bg-cyan light" wx:for="{{item.FormData.Tags}}" wx:for-item="tag" wx:key='key'>{{tag}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 占位 -->
+<view style="height:20px;"></view>

@@ -1,0 +1,12 @@
+<!--pages/Contact/Contact.wxml-->
+
+<view class="staff-card" wx:for='{{UserList}}' data-phone="{{item.phone}}" data-showphone="{{item.showphone}}" bindlongtap="CallPhone">
+	<view class="icon">
+		<image src="{{index%2?'../image/icon-idcard.png':'../image/idcard.png'}}"></image>
+	</view>
+	<view class="info-box">
+		<view class="info">姓名：{{item.showname}}</view>
+		<view class="info">电话：{{item.showphone}}</view>
+		<view class="note text-grey">说明：如需联系该员工,请长按点击名片。</view>
+	</view>
+</view>

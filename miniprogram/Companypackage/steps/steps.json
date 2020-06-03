@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "审核进度",
+  "usingComponents": {
+    "van-steps": "/dist/steps/index"
+  }
+}

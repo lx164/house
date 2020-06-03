@@ -1,0 +1,26 @@
+<!--pages/managerHome/managerHome.wxml-->
+<view class="list-box" data-url="../managerEntrust/managerEntrust" bindtap="Navigate">
+	<!-- 房源管理-委托审核、发布 -->
+	<image src="../images/1.png"></image>
+</view>
+
+<view class="list-box" data-url="../Recommend/Recommend" bindtap="Navigate">
+	<!-- 设置推荐置顶 -->
+	<image src="../images/2.png"></image>
+</view>
+
+<view class="list-box" data-url="../StaffInfo/StaffInfo" bindtap="Navigate">
+	<!-- 编辑员工信息 -->
+	<image src="../images/3.png"></image>
+</view>
+
+
+<view class="list-box" data-url="../companyInfo/companyInfo" bindtap="Navigate">
+	<!-- 设置公司资质 -->
+	<image src="../images/4.png"></image>
+</view>
+
+<view class="list-box" data-url="../managerAdmin/managerAdmin" bindtap="Navigate">
+	<!-- 设置管理员 -->
+	<image src="../images/5.png"></image>
+</view>

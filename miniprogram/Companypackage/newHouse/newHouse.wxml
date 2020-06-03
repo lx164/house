@@ -1,0 +1,57 @@
+<!--pages/secondHandHouse/secondHandHouse.wxml-->
+<!--pages/search/search.wxml-->
+
+<!-- 搜索框 -->
+<!-- <view>
+    <van-search value="{{fsearchkey}}" placeholder="请输入搜索关键词" bind:change="onChange" bind:search="onSearch" label="西安" shape="round">
+        <view slot="action" bind:tap="onSearch">搜索</view>
+    </van-search>
+</view> -->
+
+<!-- 筛选列表 -->
+<view>
+    <van-dropdown-menu>
+        <van-dropdown-item id="HouseStyle" title="户型" value="{{HouseStyle}}" options="{{HouseStyleList}}" bind:change="ChangeHouseStyle"/>
+        <van-dropdown-item id="HousePrice" title="价格" value="{{HousingPriceList.HousePrice}}" options="{{HousingPriceList}}" bind:change="ChangeHousingPrice"/>
+    </van-dropdown-menu>
+</view>
+ 
+<!-- 展示列表 -->
+<!-- <view>
+    <van-card num="2" tag="标签" price="2.00" origin-price="10.00" desc="描述信息" title="2018秋冬新款男士休闲时尚军绿飞行夹克秋冬新款男" thumb="//img.yzcdn.cn/upload_files/2017/07/02/af5b9f44deaeb68000d7e4a711160c53.jpg">
+    </van-card>
+</view> -->
+
+<view class="card-box" wx:for="{{HouseList}}" data-url="{{item.url}}" data-id="{{item.ID}}" bindtap="Navigate">
+    <view class="card">
+        <view class="card-left">
+            <image mode="scaleToFill" src="{{item.photoInfo[0]}}"></image>
+            <view class="card-tag-box card-tag card-tag-mark card-tag-bg" wx:if="{{item.showTag}}">火爆</view>
+        </view>
+        <view class="card-right">
+            <view class="card-title">{{item.title}}</view>
+            <view class="card-content-box">
+
+                <view class="card-content-box-row-top">
+                    <view class="content-row">
+                        <view class="float-left font-weight">{{item.FormData.roomStyle}} {{item.FormData.area}}㎡</view>
+                        <view class="float-right price-text">{{item.FormData.totalPrice}}万</view>
+                    </view>
+                    <view class="content-row">
+                        <view class="float-left text-grey">{{item.FormData.location}}</view>
+                        <view class="float-right text-grey">{{item.FormData.averagePrice}}元/㎡</view>
+                    </view>
+                </view>
+
+                <view class="card-content-box-row-bottom">
+                    <view class="content-tag bg-cyan light" wx:for="{{item.FormData.Tags}}" wx:for-item="tag">{{tag}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 分割线 -->
+<view style="padding:0 20px;" wx:if="{{showEnd}}">
+    <van-divider contentPosition="center" customStyle="color:#000000;border-color:#000000;">所有数据已经加载完成</van-divider>
+</view>

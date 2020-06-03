@@ -1,0 +1,10 @@
+<!--pages/entrust/entrustHome.wxml-->
+<view class='margin-top'></view>
+<view class="padding-xs" bindtap='NavigateToPages' data-id="sale" data-backgroundcolor="#48c0f2" data-title="发布卖房委托" data-url="../../Companypackage/saleEntrust/saleEntrust">
+    <image class="img" id='img{{index}}' src="../image/sale.png" mode="widthFix" />
+</view>
+
+<view class='margin-top'></view>
+<view class="padding-xs" bindtap='NavigateToPages' data-id="rentout" data-backgroundcolor="#f9ae95" data-title="发布出租委托" data-url="../../Companypackage/rentOutEntrust/rentOutEntrust">
+    <image class="img" id='img{{index}}' src="../image/rentout.png" mode="widthFix" />
+</view>

@@ -1,0 +1,82 @@
+<!--pages/houseDetail/houseDetail.wxml-->
+
+<!-- 轮播图 -->
+<view class="swiper">
+    <swiper easing-function="easeInOutCubic" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{houseImages}}" wx:key="*this">
+            <swiper-item>
+                <image src="{{item}}" mode="scaleToFill" style="width:100%;height:200px;background-color:#eeeeee;"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!-- 描述 -->
+<view class="headerBox">
+    <view class="headerBox-row-title font-size-16 title-text-font-weight">{{title}}</view>
+    <view class="headerBox-row font-size-14 text-price" style="">
+        <view class="float-left">总价{{totalPrice}}万 均价{{averagePrice}}元/㎡</view>
+        <view class="float-right ">{{houseStyle}}</view>
+    </view>
+    <view class="headerBox-row font-size-12 text-grey">所在小区：{{location}}</view>
+    <view class="headerBox-row headerBox-tag">
+        <view class="content-tag bg-cyan light" wx:for='{{Tags}}'>{{item}}</view>
+    </view>
+</view>
+
+<!-- 中介联系方式 -->
+<view class="houseAgent-box font-size-14">
+    <view class="houseAgent-box-portrait float-left">
+        <!-- <image src="http://img4.imgtn.bdimg.com/it/u=271321746,1088167300&fm=26&gp=0.jpg"></image> -->
+        <image src="../image/icon.png"></image>
+    </view>
+    <view class="Contact-box">
+        <view class="font-size-16" style="display:block;font-weight:500;">{{charge.name}}</view>
+        <view class="text-grey">{{displayPhone}}</view>
+    </view>
+    <view class="contact-box-right float-right" data-phone="{{charge.phone}}" bindtap="CallPhone">
+        <view class="contact-box-right-view">
+            <image src="../image/phone.png"></image>
+        </view>
+        <view style="color:grey;">联系经纪人</view>
+    </view>
+</view>
+
+<!-- /* 房源介绍 */ -->
+<view class="introduce-box">
+    <view class="introduce-box-title">房源详细介绍</view>
+    <view class="introduce-box-content" wx:for="{{DetialList}}">
+        <text class="text-grey">{{item.title}}：</text>
+        <text class="text-grey">{{item.value}}</text>
+    </view>
+</view>
+
+<!-- /* 底部导航栏 */ -->
+<view class="footerBar">
+    <view class="footer-left float-left font-size-12">
+
+        <view class="footer-item" bindtap="Docollection">
+            <view>
+                <image src="../image/{{HasCollection?'collection':'uncollection'}}.png"></image>
+            </view>
+            <view wx:if='{{!HasCollection}}'>收藏</view>
+            <view wx:else style="color:#F74C50">已收藏</view>
+        </view>
+
+        <!-- <view class="footer-item">
+            <view>
+                <image src="../image/coordinate.png"></image>
+            </view>
+            <view>地图导航</view>
+        </view> -->
+
+        <view class="footer-item" style="width:70px;" bindtap="NavigateToCalculator">
+            <view>
+                <image src="../image/calculate.png"></image>
+            </view>
+            <view>房贷计算器</view>
+        </view>
+
+    </view>
+    <view class="footer-right float-right" data-phone="{{charge.phone}}" bindtap="Appointment">预约看房</view>
+</view>

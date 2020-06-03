@@ -1,0 +1,78 @@
+<!--pages/mypage/mypage.wxml-->
+<!-- 背景图 -->
+<view class="bg-box">
+	<image src="../image/mypagebg.png"></image>
+</view>
+
+<!-- 为登录 -->
+<view wx:if="{{!UserLogin}}" class="head-box" bindtap="NavigateToLogin">
+	<view class="userAvatar-box">
+		<open-data type="userAvatarUrl"></open-data>
+	</view>
+	<view class="userlogin">
+		<view>登录/注册 (点击登录)</view>
+		<view class="font-size-12" style="color:grey;">需要先完成注册登录才能使用哦！</view>
+	</view>
+</view>
+
+<!-- 已登录 -->
+<view wx:else class="head-box" bindtap="ScanPage">
+	<view class="userAvatar-box">
+		<open-data type="userAvatarUrl"></open-data>
+	</view>
+	<view class="userlogin">
+		<view style="font-weight:bold;">欢迎,{{userInfo.name}}</view>
+		<view class="font-size-12" style="color:grey;">{{userInfo.nickName}} {{userInfo.phone}}</view>
+	</view>
+</view>
+
+<view class="content-box">
+	<view class="content-title font-size-16 ">我的服务</view>
+
+	<!-- <view class="content-row" wx:if='{{Adminstator}}' data-id="managerHome" data-url="../../Adminpackage/managerHome/managerHome" bindtap="Navigate">
+        <view class="content-icon float-left">
+            <image src="../image/adminstor.png"></image>
+        </view>
+        <view class="content-text font-size-14">管理员</view>
+    </view> -->
+
+	<view class="content-row" data-id="mypage" data-url="../../Companypackage/myentrust/myentrust" bindtap="Navigate">
+		<view class="content-icon float-left">
+			<image src="../image/entrust.png"></image>
+		</view>
+		<view class="content-text font-size-14">我的委托</view>
+	</view>
+
+	<view class="content-row" data-id="mycollection" data-url="../../Companypackage/mycollection/mycollection" bindtap="Navigate">
+		<view class="content-icon float-left">
+			<image src="../image/mycollection.png"></image>
+		</view>
+		<view class="content-text font-size-14">我的收藏</view>
+	</view>
+</view>
+
+<view class="content-box">
+	<view class="content-title font-size-16 ">设置</view>
+
+	<view class="content-row">
+		<view class="content-icon float-left">
+			<image src="../image/address.png"></image>
+		</view>
+		<view class="content-text font-size-14">
+			<button open-type='contact' style="color:black;height:35px;line-height:35px;font-weight: lighter;padding:0;width:100%;border:none;background:#fff;font-size:14px;text-align:left;">在线客服</button>
+		</view>
+	</view>
+
+	<view class="content-row" bindtap="CleanInfo">
+		<view class="content-icon float-left">
+			<image src="../image/history.png"></image>
+		</view>
+		<view class="content-text font-size-14">清除记录</view>
+	</view>
+	<!-- <view class="content-row">
+        <view class="content-icon float-left">
+            <image src="../image/longout.png"></image>
+        </view>
+        <view class="content-text font-size-14">退出登录</view>
+    </view> -->
+</view>

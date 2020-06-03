@@ -1,0 +1,7 @@
+<!--Adminpackage/scanPage/scanPage.wxml-->
+<view class="scan-box">
+	<view class="title">使用说明：请点击下面的扫码按钮，然后扫描管理员给的二维码，按照提示操作即可。</view>
+	<view class="image-box" bindtap="ScanQrCode">
+		<image src="../images/scan.png"></image>
+	</view>
+</view>

@@ -1,0 +1,470 @@
+/* Adminpackage/EntrustDetail/EntrustDetail.wxss */
+/* .form-box {
+    width: 100%;
+    padding-top: 10px;
+    background-color: #fff;
+}
+
+.select-box {
+    height: 44px;
+    line-height: 44px;
+    color: #323233;
+    font-size: 14px;
+    padding-right: 15px;
+    border-bottom: 1rpx #f5f6f8 solid;
+    background-color: #fff;
+}
+
+.switch {
+    margin-top: 10px;
+    float: right;
+}
+
+.submit-btn {
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    margin: 30px 30px;
+    border-radius: 10rpx;
+    color: #fff;
+    background-color: #1989fa;
+}
+
+.select-color {
+    color: #ff8000;
+}
+
+.selected-color {
+    color: #0080ff;
+}
+
+.tag-box {
+    width: 90%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    height: 64rpx;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    overflow: visible;
+    border: 1rpx solid #0081ff;
+    border-radius: 18rpx;
+}
+
+.padding-right-30rpx {
+    padding-right: 30rpx;
+}
+
+.padding {
+    padding: 10rpx;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+
+.submitbtn {
+    width: 100%;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.img{
+  width:100%;
+}
+
+.padding-xs {
+  padding: 10rpx;
+} */
+
+page{
+    background-color: #f0f0f0;
+}
+
+.list-box{
+    /* height: 250rpx; */
+    margin: 15rpx 30rpx;
+    border-radius: 15rpx;
+    padding: 25rpx;
+    background-color: #ffffff;
+}
+
+.title{
+    margin-bottom: 20rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.tips{
+    font-size: 20rpx;
+    color:rgb(33, 207, 111);
+}
+
+.desc{
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    color:grey;
+}
+
+.text-red{
+    color: #e26843;
+}
+
+.text-blue{
+    color: #0081ff;
+}
+
+
+.submit-btn {
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    margin: 30px 30px;
+    border-radius: 10rpx;
+    color: #fff;
+    background-color: #1989fa;
+}
+
+.padding {
+    padding: 10rpx;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+
+.submitbtn {
+    width: 100%;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.img{
+  width:100%;
+}
+
+.padding-xs {
+  padding: 10rpx;
+}
+
+
+.recommendation-box {
+    height: 40px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.recommendation-text {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.recommendation-list-box{
+     position: relative;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    font-size: 12px;
+    color: #323233;
+    margin-top:5px;
+    background-color: #ffffff;
+}
+
+.card {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.card-left {
+    position: relative;
+    -webkit-box-flex: none;
+    flex: none;
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+.card-left image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-right {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 描述 */
+
+.card-content-box {
+    width: 100%;
+    height: 70px;
+    margin-top: 12px;
+    /* background-color: #ee0a24; */
+}
+
+.card-content-box-row-top {
+    width: 100%;
+    height: 40px;
+    /* background-color: #9e2260; */
+}
+
+.card-content-box-row-bottom {
+    width: 100%;
+    /* height: 30px; */
+    margin-top: 5px;
+    /* background-color: #c722bf; */
+}
+
+.content-row {
+    width: 100%;
+    height: 20px;
+    /* background-color: #19b9a4; */
+}
+
+/* 标签 */
+
+.bg-tag{
+    background-color:#F6F7FB;
+    color:#677EA8;
+}
+
+.price-text{
+    font-size: 14px;
+    color:#EB4340;
+}
+
+/* 左上角的标签 */
+
+.card-tag {
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    line-height: normal;
+    padding: 0.2em 0.5em;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 0.2em;
+}
+
+.card-tag-box {
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+
+.card-tag:after {
+    border-color: currentColor;
+    border-radius: 0.2em * 2;
+}
+
+.card-tag-mark, .card-tag-mark:after {
+    border-radius: 0 999px 999px 0;
+}
+
+.card-tag-mark {
+    padding-right: 0.7em;
+}
+
+.card-tag-bg {
+    background-color: #ee0a24;
+}
+
+
+/* 轮播 */
+
+.swiper swiper {
+    width: 100%;
+    height: 200px;
+    /* background-color: blue; */
+}
+
+/* 简介 */
+
+.headerBox {
+    width: 100%;
+    padding: 8px 0;
+    background-color: #fff;
+}
+
+.headerBox-row {
+    /* width: 100%; */
+    height: 20px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.headerBox-tag {
+    line-height: normal;
+}
+
+.content-tag {
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    line-height: normal;
+    padding: 0.2em 0.5em;
+    /* color: #fff; */
+    font-size: 10px;
+    border-radius: 0.2em;
+}
+
+/* 房产中介 */
+
+.houseAgent-box {
+    /* width: 100%; */
+    height: 60px;
+    margin-top: 8px;
+    padding: 8px 0;
+    background-color: #fff;
+}
+
+.houseAgent-box view {
+    /* display: inline-flex; */
+    display: inline-block;
+}
+
+.houseAgent-box-portrait {
+    width: 60px;
+    height: 60px;
+    /* background-color: beige; */
+}
+
+.houseAgent-box-portrait image {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.Contact-box {
+    /* width: 40px; *//* height: 50px; */
+    margin: 10px;
+    /* background-color: lightcoral; */
+}
+
+.contact-box-right {
+    width: 70px;
+    height: 60px;
+    margin-right: 15px;
+    /* background-color: aqua; */
+}
+
+.contact-box-right-view {
+    margin-left: 12px;
+}
+
+.contact-box-right-view image {
+    width: 35px;
+    height: 35px;
+    /* background-color: khaki; */
+}
+
+/* 房源介绍 */
+
+.introduce-box {
+    margin-top: 8px;
+    margin-bottom: 60px;
+    padding: 8px;
+    background-color: #fff;
+}
+
+.introduce-box-title {
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.introduce-box-content {
+    margin-left: 15px;
+    padding: 5px;
+    border-bottom: 1rpx #f0f0f0 dashed;
+}
+
+/* 底部导航栏 */
+
+.footerBar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: 1rpx solid #f0f0f0;
+    background-color: #fff;
+}
+
+.footer-left {
+    width: 60%;
+    height: 50px;
+    padding-top: 3px;
+    /* background-color: rgb(255, 0, 200); */
+}
+
+.footer-item {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    display: inline-block;
+    text-align: center;
+    /* background: #fff; */
+}
+
+.footer-item image {
+    width: 25px;
+    height: 25px;
+    /* background: #fff; */
+}
+
+.footer-right {
+    width: 40%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2aa515;
+}
+
+
+/* 字体颜色 */
+
+.text-price {
+    color: orangered;
+}
+
+.text-grey {
+    color: grey;
+}
+
+.title-text-font-weight {
+    font-weight: bold;
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "设置首页推荐",
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTextStyle":"black",
+  "usingComponents": {
+    "van-card": "../../dist/card/index"
+  }
+}

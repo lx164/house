@@ -1,0 +1,177 @@
+<!--Adminpackage/EntrustDetail/EntrustDetail.wxml-->
+<!-- 步骤1 -->
+<view wx:if="{{step==1&&!preview}}">
+	<view class="list-box">
+		<text decode="true" class="desc">提示：请检查委托人发布的详细委托内容。<text decode="true" class="tips">\n1、如有不明确的请直接联系委托人；\n2、如果检查没有问题，点击“下一步”,按照提示操作即可。</text></text>
+	</view>
+
+	<view class="list-box">
+		<view class="title">房子详细信息：（{{StatusList.EntrustType=='sale'?'出售':'出租'}}）</view>
+		<view class="desc" wx:for="{{DetialList}}" wx:key='key' data-id="{{item['_id']}}" bindtap="Navigate">{{item.title}}：<text class="text-blue">{{item.value?item.value:'无'}}</text></view>
+		<view class="desc">发布委托时间：<text class="text-blue">{{StatusList.updateTime?StatusList.updateTime:'无'}}</text></view>
+	</view>
+
+	<view class="list-box">
+		<view class="desc">审核状态：<text class="text-red">{{StatusList.checkedTime?'已审核':'待审核'}} {{StatusList.checkedBy?StatusList.checkedBy:''}} {{StatusList.checkedTime?StatusList.checkedTime:''}}</text></view>
+		<view class="desc">发布状态：<text class="text-red">{{StatusList.publish?'已发布':'未发布'}} {{StatusList.checkedBy?StatusList.checkedBy:''}} {{StatusList.publishTime?StatusList.publishTime:''}}</text></view>
+	</view>
+
+	<view class="list-box">
+		<view class="title">委托人上传的照片(共{{photoInfo.length?photoInfo.length:0}}张)</view>
+		<image wx:for="{{photoInfo}}" src="{{item}}"></image>
+	</view>
+
+	<view class="padding flex flex-direction" wx:if='{{showButton}}'>
+		<button class='cu-btn lg submitbtn' form-type="SubmitEntrust" style="background:#0080ff;" bindtap="nextStep">确认无误,下一步</button>
+	</view>
+
+</view>
+
+<!-- 步骤2 -->
+<view wx:if="{{step==2&&!preview}}">
+	<view class="list-box">
+		<view class="title">设置醒目的标题<text wx:if="{{title}}" class="text-blue">(共{{title.length}}/30字)</text></view>
+		<view class="tips" style="color:grey;">设置一个用于显示在搜索页面的标题,主要用来吸引找房的用户，比如：<text class="text-blue">“新房源 免押金 可月付 先到先得”、“前海地铁物业豪华装修5房”</text>之类的,尽量不要重复！可以参考<text class="text-blue">安居客、贝壳找房、蛋壳公寓</text>等手机APP里面气的标题。</view>
+		<view class="input-box">
+			<input placeholder='输入标题' maxlength="30" bindinput="InputData" id='title' value="{{title}}" style="font-size:24rpx;padding:8rpx;margin-top:20rpx;color:#0081ff;border:#48c0f2 1rpx solid; border-radius: 15rpx;"></input>
+		</view>
+		<view class="tips" style="color:grey;margin-top:10px;">
+			<view>标题参考信息：</view>
+			<view wx:if="{{DetialList[4]['value']}}">房子地址：<text class="text-blue">{{DetialList[5]['value']}}</text></view>
+			<view wx:if="{{DetialList[4]['value']}}">房子所在小区：<text class="text-blue">{{DetialList[4]['value']}}</text></view>
+			<view wx:if="{{DetialList[9]['value']}}">房子优势：<text class="text-blue">{{DetialList[9]['value']}}</text></view>
+			<view wx:if="{{DetialList[10]['value']}}">看房方式：<text class="text-blue">{{DetialList[10]['value']}}</text></view>
+		</view>
+	</view>
+
+	<view class="padding flex flex-direction" wx:if='{{title}}'>
+		<button class='cu-btn lg submitbtn' form-type="SubmitEntrust" style="background:#0080ff;" bindtap="nextStep">设置完成,下一步</button>
+	</view>
+
+</view>
+
+<!-- 步骤3 -->
+<view wx:if="{{step==3&&!preview}}">
+	<view class="list-box">
+		<view class="title">设置负责该房源的人</view>
+		<view class="tips" style="color:grey;">用来显示在房源页面的中介信息,当客户看中该房源后，可以直接联系到该负责人。</view>
+		<view class="input-box">
+			<input placeholder='负责人称呼：如黄小姐' maxlength="5" bindinput="InputData" id='name' value="{{charge.name}}" style="font-size:24rpx;padding:8rpx;margin-top:20rpx;color:#0081ff;border:#48c0f2 1rpx solid; border-radius: 15rpx;"></input>
+		</view>
+		<view class="input-box">
+			<input placeholder='负责人联系方式' type="number" maxlength="11" bindinput="InputData" id='phone' value="{{charge.phone}}" style="font-size:24rpx;padding:8rpx;margin-top:20rpx;color:#0081ff;border:#48c0f2 1rpx solid; border-radius: 15rpx;"></input>
+		</view>
+	</view>
+	<view class="padding flex flex-direction" wx:if='{{charge.name&&charge.phone}}'>
+		<button class='cu-btn lg submitbtn' form-type="SubmitEntrust" style="background:#1bab75;" bindtap="Preview">效果预览</button>
+		<button class='cu-btn lg submitbtn' form-type="SubmitEntrust" style="background:#0080ff;" bindtap="nextStep">设置完成,下一步</button>
+	</view>
+</view>
+
+<!-- 步骤3 -->
+<view wx:if="{{step==4&&!preview}}">
+	<view class="list-box">
+		<view class="title">设置发布到的板块</view>
+		<view class="tips" style="color:grey;">根据实际情况,将该房源信息发布到具体的板块,请选择“新房”、“二手房”、“租房板块”。</view>
+		<view class="tips" style="color:#ff0080;">房子参考信息：{{FormData['HouseType']}} {{StatusList.EntrustType=='sale'?'出售':'出租'}}</view>
+		<view class="input-box cu-btn lg submitbtn" style="background:#1bab75;" bindtap="SelectPlate">选择板块:{{plate}}</view>
+	</view>
+	<view class="padding flex flex-direction" wx:if='{{plate}}'>
+		<button class='cu-btn lg submitbtn' form-type="SubmitEntrust" style="background:#0080ff;" bindtap="DoPublishing">发布到 {{plate}} 板块</button>
+	</view>
+</view>
+
+<!-- 步骤四 -->
+<view wx:if="{{preview}}">
+	<van-tabs animated='true' color='#00ff40' border='false' bind:click='ChangeTab'>
+		<van-tab title="搜索页面效果预览">
+			<view class="recommendation-list-box">
+				<view class="card">
+					<view class="card-left">
+						<image mode="scaleToFill" src="{{photoInfo[0]}}"></image>
+						<view class="card-tag-box card-tag card-tag-mark card-tag-bg" wx:if="{{item.showTag}}">推荐</view>
+					</view>
+					<view class="card-right">
+						<view class="card-title">{{title}}</view>
+						<view class="card-content-box">
+							<view class="card-content-box-row-top">
+								<view class="content-row">
+									<view class="float-left font-weight">{{FormData.houseStyle}} {{FormData.area}}㎡</view>
+									<view class="float-right price-text">{{FormData.totalPrice}} {{StatusList['EntrustType']=='sale'?'万':'元/月'}}</view>
+								</view>
+								<view class="content-row">
+									<view class="float-left text-grey">{{FormData.location}}</view>
+									<view class="float-right text-grey" wx:if="{{StatusList['EntrustType']=='sale'}}">{{FormData.averagePrice}}元/㎡</view>
+								</view>
+							</view>
+
+							<view class="card-content-box-row-bottom">
+								<view class="content-tag bg-tag" wx:for="{{FormData.Tags}}" wx:for-item="tag" wx:key='key'>{{tag}}</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</van-tab>
+
+
+		<van-tab title="详情页面效果预览">
+
+			<!--pages/houseDetail/houseDetail.wxml-->
+
+			<!-- 轮播图 -->
+			<view class="swiper">
+				<swiper easing-function="easeInOutCubic" indicator-dots="true" autoplay="true" interval="1500" duration="500">
+					<block wx:for="{{photoInfo}}" wx:key="*this">
+						<swiper-item>
+							<image src="{{item}}" mode="scaleToFill" style="width:100%;height:200px;background-color:#eeeeee;"></image>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+
+			<!-- 描述 -->
+			<view class="headerBox">
+				<view class="headerBox-row font-size-16 title-text-font-weight">{{title}}</view>
+				<view class="headerBox-row font-size-14 text-price" style="">
+					<view class="float-left" wx:if="{{StatusList['EntrustType']=='sale'}}">总价{{FormData.totalPrice}}万 均价{{FormData.averagePrice}}元/㎡</view>
+					<view class="float-left" wx:else>房租 {{FormData.totalPrice}}元/月</view>
+					<view class="float-right ">{{FormData.houseStyle}}</view>
+				</view>
+				<view class="headerBox-row font-size-12 text-grey">所在小区：{{FormData.location}}</view>
+				<view class="headerBox-row headerBox-tag">
+					<view class="content-tag bg-cyan light" wx:for="{{FormData.Tags}}" wx:for-item="tag" wx:key='key'>{{tag}}</view>
+				</view>
+			</view>
+ 
+			<!-- 中介联系方式 -->
+			<view class="houseAgent-box font-size-14">
+				<view class="houseAgent-box-portrait float-left">
+					<image src="http://img4.imgtn.bdimg.com/it/u=271321746,1088167300&fm=26&gp=0.jpg"></image>
+				</view>
+				<view class="Contact-box">
+					<view class="font-size-16" style="display:block;font-weight:500;">{{charge.name}}</view>
+					<view class="text-grey">{{displayPhone}}</view>
+				</view>
+				<view class="contact-box-right float-right" data-phone="123455" bindtap="CallPhone">
+					<view class="contact-box-right-view">
+						<image src="../images/phone.png"></image>
+					</view>
+					<view>联系经纪人</view>
+				</view>
+			</view>
+
+			<!-- /* 房源介绍 */ -->
+			<view class="introduce-box">
+				<view class="introduce-box-title">房源介绍</view>
+				<view class="introduce-box-content" wx:for="{{1}}">
+					<text class="text-grey">略</text>
+				</view>
+			</view>
+		</van-tab>
+
+	</van-tabs>
+	<view class="padding flex flex-direction" wx:if='{{charge.name&&charge.phone}}'>
+		<button class='cu-btn lg submitbtn' form-type="SubmitEntrust" style="background:#1bab75;" bindtap="Preview">结束预览</button>
+	</view>
+</view>

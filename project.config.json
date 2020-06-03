@@ -1,0 +1,232 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"cloudfunctionRoot": "cloudfunctions/",
+	"miniprogramRoot": "miniprogram/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wxc321a2069fc809c3",
+	"projectname": "%E7%A7%9F%E6%88%BF%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 1,
+					"name": "Companypackage/secondHandHouse/secondHandHouse",
+					"pathName": "Companypackage/secondHandHouse/secondHandHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "Companypackage/houseDetail/houseDetail",
+					"pathName": "Companypackage/houseDetail/houseDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mypage/mypage",
+					"pathName": "pages/mypage/mypage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "Companypackage/saleEntrust/saleEntrust",
+					"pathName": "Companypackage/saleEntrust/saleEntrust",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "Companypackage/qualification/qualification",
+					"pathName": "Companypackage/qualification/qualification",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "Companypackage/Contact/Contact",
+					"pathName": "Companypackage/Contact/Contact",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "Companypackage/steps/steps",
+					"pathName": "Companypackage/steps/steps",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "Companypackage/myentrust/myentrust",
+					"pathName": "Companypackage/myentrust/myentrust",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "Adminpackage/managerHome/managerHome",
+					"pathName": "Adminpackage/managerHome/managerHome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Adminpackage/managerEntrust/managerEntrust",
+					"pathName": "Adminpackage/managerEntrust/managerEntrust",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Adminpackage/EntrustDetail/EntrustDetail",
+					"pathName": "Adminpackage/EntrustDetail/EntrustDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Companypackage/rentOutEntrust/rentOutEntrust",
+					"pathName": "Companypackage/rentOutEntrust/rentOutEntrust",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Companypackage/newHouse/newHouse",
+					"pathName": "Companypackage/newHouse/newHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Companypackage/rentingHouse/rentingHouse",
+					"pathName": "Companypackage/rentingHouse/rentingHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Companypackage/rentingHouseDetail/rentingHouseDetail",
+					"pathName": "Companypackage/rentingHouseDetail/rentingHouseDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Adminpackage/scanPage/scanPage",
+					"pathName": "Adminpackage/scanPage/scanPage",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Companypackage/mycollection/mycollection",
+					"pathName": "Companypackage/mycollection/mycollection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Adminpackage/Recommend/Recommend",
+					"pathName": "Adminpackage/Recommend/Recommend",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Adminpackage/StaffInfo/StaffInfo",
+					"pathName": "Adminpackage/StaffInfo/StaffInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Adminpackage/companyInfo/companyInfo",
+					"pathName": "Adminpackage/companyInfo/companyInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Adminpackage/PublishedDetail/PublishedDetail",
+					"pathName": "Adminpackage/PublishedDetail/PublishedDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Adminpackage/managerAdmin/managerAdmin",
+					"pathName": "Adminpackage/managerAdmin/managerAdmin",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,95 @@
+/* Adminpackage/Recommend/Recommend.wxss */
+
+.list-box {
+    margin: 5px;
+}
+
+.tips-box {
+    margin: 5px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: bold;
+    /* color: grey; */
+}
+
+.desc {
+    font-size: 12px;
+    color: grey;
+}
+
+.btn {
+    margin: 10px 20px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #42A5F5;
+    color: #fff;
+}
+
+.Nodata-tips-box {
+    /* height: 250rpx; */
+    margin: 15rpx 30rpx;
+    border-radius: 15rpx;
+    padding: 25rpx;
+    font-size: 24rpx;
+    color: grey;
+    background-color: #ffffff;
+}
+
+
+/* 模态弹窗 */
+.modal-title {
+    position: absolute;
+    text-align: center;
+    /* width: calc(100% - 340rpx); */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: 60rpx;
+    font-size: 32rpx;
+    line-height: 60rpx;
+    cursor: none;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: black;
+    font-weight: bold;
+}
+
+.modal-btn {
+    width: 50%;
+    margin-top: 5px;
+    line-height: 45px;
+    display: inline-block;
+}
+
+.bg-white {
+    background-color: #fff;
+    color: #666;
+}
+
+.bg-green.light {
+    color: #39b54a;
+    background: #d7f0db;
+}
+
+
+.bg-grey.light {
+    color: #8799a3;
+    background: #e7ebed;
+}
+
+
+.text-blue,
+.line-blue,
+.lines-blue {
+    color: #0081ff;
+}

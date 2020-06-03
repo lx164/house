@@ -1,0 +1,18 @@
+<!--pages/qualification/qualification.wxml-->
+
+<view class="content-box">
+    <view class="content-title">企业介绍</view>
+    <view class="content-text" style="color:grey;">
+        <text decode='true'>&nbsp;&nbsp;&nbsp;&nbsp;{{introduce}}</text>
+    </view>
+
+    <view class="content-title">企业资质公示</view>
+    <view class="content-photo">
+        <image src="../image/company/company-info.jpg"></image>
+    </view>
+
+    <view class="content-text" style="text-align:center;color:grey;">
+        <text decode='true'>更新于 {{updatetime}}</text>
+    </view>
+    
+</view>

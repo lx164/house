@@ -1,0 +1,13 @@
+/* pages/entrust/entrustHome.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.img {
+  width: 100%;
+}
+
+.padding-xs {
+  padding: 10rpx;
+}

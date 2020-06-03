@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新房子-快来找房",
+  "navigationBarBackgroundColor": "#FE6927",
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

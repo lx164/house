@@ -1,0 +1,87 @@
+/* pages/entrust/entrust.wxss */
+
+.form-box {
+    width: 100%;
+    padding-top: 10px;
+    background-color: #fff;
+}
+
+.select-box {
+    height: 44px;
+    line-height: 44px;
+    color: #323233;
+    font-size: 14px;
+    padding-right: 15px;
+    border-bottom: 1rpx #f5f6f8 solid;
+    background-color: #fff;
+}
+
+.switch {
+    margin-top: 10px;
+    float: right;
+}
+
+.submit-btn {
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    margin: 30px 30px;
+    border-radius: 10rpx;
+    color: #fff;
+    background-color: #1989fa;
+}
+
+.select-color {
+    color: #ff8000;
+}
+
+.selected-color {
+    color: #0080ff;
+}
+
+.tag-box {
+    width: 90%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    height: 64rpx;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    overflow: visible;
+    border: 1rpx solid #0081ff;
+    border-radius: 18rpx;
+}
+
+.padding-right-30rpx {
+    padding-right: 30rpx;
+}
+
+.padding {
+    padding: 10rpx;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+
+.submitbtn {
+    width: 100%;
+    color: #fff;
+    margin: 20px 0;
+}
+
+.img{
+  width:100%;
+}
+
+.padding-xs {
+  padding: 10rpx;
+}

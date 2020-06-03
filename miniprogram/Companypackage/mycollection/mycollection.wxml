@@ -1,0 +1,7 @@
+<!--pages/mycollection/mycollection.wxml-->
+<view wx:for='{{List}}' wx:key='list' data-doc="{{item._id}}" data-id="{{item.ID}}" data-type="{{item.type}}" class="list-box" bindtap="Edit">
+	<van-card desc1="地点：{{item.location}}" desc2="房型：{{item.houseStyle}} {{item.type=='sale'?'(出售)':'(出租)'}}" desc3="推荐时间：{{item.updateTime}}" desc4="说明：" title="{{item.title}}" thumb="{{item.houseImages[0]?item.houseImages[0]:'../image/image.png'}}" />
+	<view></view>
+</view>
+
+<view class="tips-box" wx:if='{{List.length==0}}'>暂时没有房源收藏~</view>

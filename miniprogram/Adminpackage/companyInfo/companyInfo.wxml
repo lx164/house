@@ -1,0 +1,36 @@
+<!--Adminpackage/companyInfo/companyInfo.wxml-->
+<view class="tips-box">
+	<view class="title">公司介绍(共 {{CompanyData.introduce.length?CompanyData.introduce.length:0}}/2000 字)</view>
+	<view class="desc" style="color:#42A5F5;margin-top:10px;">该文案将用于在公司资质页面进行展示,不超过2000字。</view>
+    <view class="desc">上次更新：{{CompanyData.editer}} {{CompanyData.phone}}</view>
+    <view class="desc">上次更新时间：{{CompanyData.updatetime}}</view>
+	<view style="margin:15px 0px; ">
+		<textarea placeholder="公司介绍文案" value='{{CompanyData.introduce}}' maxlength='2000' auto-height='true' data-id="info" bindinput="InputData"/>
+	</view>
+	<view class="title">首页公告(共 {{CompanyData.notice.length?CompanyData.notice.length:0}}/100 字)</view>
+	<view class="desc" style="color:#42A5F5;margin-top:10px;">该文案将用于在首页的公告位置进行展示,不超过100字。</view>
+	<view style="margin-top:15px;">
+		<textarea placeholder="首页公告" value='{{CompanyData.notice}}' maxlength='100' auto-height='true' data-id="notice" bindinput="InputData"/>
+	</view>
+</view>
+
+<!-- <view class="tips-box">
+	<view class="title">公司照片展示</view>
+	<view class="desc" style="color:#42A5F5;">使用前请先简单阅读以下使用说明：</view>
+	<view class="desc">设置的员工信息将显示在首页的 “联系员工” 模块；</view>
+	<view class="cu-form-group" style="padding-left:5px;">
+		<view class="grid col-4 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="index" bindtap="ViewImage" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+</view> -->
+
+<view class="btn bg-green" bindtap="submitData">提交更新数据</view>

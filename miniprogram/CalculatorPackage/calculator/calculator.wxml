@@ -1,0 +1,161 @@
+<view class="wrap">
+    <view class="nav">
+        <view class="nav-item {{param.navChoose == 0 ? 'choose' : ''}}" bindtap='onNavTab' data-idx='0'>商业贷款</view>
+        <view class="nav-item {{param.navChoose == 1 ? 'choose' : ''}}" bindtap='onNavTab' data-idx='1'>公积金贷款</view>
+        <view class="nav-item {{param.navChoose == 2 ? 'choose' : ''}}" bindtap='onNavTab' data-idx='2'>组合贷款</view>
+    </view>
+    <view class='content'>
+        <view class='item'>
+            <view class='item-l'>还款方式</view>
+            <view class='item-r'>
+                <radio-group class="radio-box" bindchange="getRepayTypeTab">
+                    <label class="radio" wx:for="{{repayType}}" wx:key="{{index}}">
+                        <radio value="{{item.value}}" checked="{{item.checked}}" color='#005aff' />{{item.name}}
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class='item' wx:if="{{param.navChoose != 2}}">
+            <view class='item-l'>计算方式</view>
+            <view class='item-r'>
+                <radio-group class="radio-box" bindchange="getCalTypeTab">
+                    <label class="radio" wx:for="{{calType}}" wx:key="{{index}}">
+                        <radio value="{{item.value}}" checked="{{item.checked}}" color='#005aff' />{{item.name}}
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view wx:if="{{param.navChoose != 1}}">
+            <view class='item' wx:if="{{param.navChoose == 2 || param.calChoose == 0}}">
+                <view class='item-l'>商业贷款总额</view>
+                <view class='item-r'>
+                    <input type='digit' class='input' placeholder='请输入贷款总额' value="{{param.moneyA}}" bindinput='getMoneyATab'></input>
+                    <view>万元</view>
+                </view>
+            </view>
+            <view wx:if="{{param.navChoose != 2 && param.calChoose == 1}}">
+                <view class='item'>
+                    <view class='item-l'>单价</view>
+                    <view class='item-r'>
+                        <input type='digit' class='input' placeholder='请输入单价' value="{{param.priceA}}" bindinput='getPriceATab'></input>
+                        <view>元/㎡</view>
+                    </view>
+                </view>
+                <view class='item'>
+                    <view class='item-l'>面积</view>
+                    <view class='item-r'>
+                        <input type='digit' class='input' placeholder='请输入面积' value="{{param.areaA}}" bindinput='getAreaATab'></input>
+                        <view>㎡</view>
+                    </view>
+                </view>
+                <view class='items'>
+                    <view class='top'>
+                        <view class='item-l'>首付</view>
+                        <view class='item-r'>
+                            <view class='input'>{{param.downA}}</view>
+                            <view>成</view>
+                        </view>
+                    </view>
+                    <view class='slider'>
+                        <slider bindchange="getDownA" min="2" max="9" value="{{param.downA}}" show-value activeColor="#36c5f7" />
+                        <view>成</view>
+                    </view>
+                </view>
+            </view>
+            <view class='items'>
+                <view class='top'>
+                    <view class='item-l'>商业贷款期限</view>
+                    <view class='item-r'>
+                        <view class='input'>{{param.yearA}}年</view>
+                        <view>（{{param.yearA*12}}期）</view>
+                    </view>
+                </view>
+                <view class='slider'>
+                    <slider bindchange="getYearA" min="1" max="30" value="{{param.yearA}}" show-value activeColor="#36c5f7" />
+                    <view>年</view>
+                </view>
+            </view>
+            <view class='item' bindtap='onRateTab' data-idx='0'>
+                <view class='item-l'>商业贷款利率</view>
+                <view class='item-r'>
+                    <view class='input'>{{param.rateA}}</view>
+                    <view class='unit'>
+                        <text>%</text>
+                        <image src='./arrow.png'></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{param.navChoose != 0}}">
+            <view class='item' wx:if="{{param.navChoose == 2 || param.calChoose == 0}}">
+                <view class='item-l'>公积金贷款总额</view>
+                <view class='item-r'>
+                    <input type='digit' class='input' placeholder='请输入贷款总额' value="{{param.moneyB}}" bindinput='getMoneyBTab'></input>
+                    <view>万元</view>
+                </view>
+            </view>
+            <view wx:if="{{param.navChoose != 2 && param.calChoose != 0}}">
+                <view class='item'>
+                    <view class='item-l'>单价</view>
+                    <view class='item-r'>
+                        <input type='digit' class='input' placeholder='请输入单价' value="{{param.priceB}}" bindinput='getPriceBTab'></input>
+                        <view>元/㎡</view>
+                    </view>
+                </view>
+                <view class='item'>
+                    <view class='item-l'>面积</view>
+                    <view class='item-r'>
+                        <input type='digit' class='input' placeholder='请输入面积' value="{{param.areaB}}" bindinput='getAreaBTab'></input>
+                        <view>㎡</view>
+                    </view>
+                </view>
+                <view class='items'>
+                    <view class='top'>
+                        <view class='item-l'>首付</view>
+                        <view class='item-r'>
+                            <view class='input'>{{param.downB}}</view>
+                            <view>成</view>
+                        </view>
+                    </view>
+                    <view class='slider'>
+                        <slider bindchange="getDownB" min="2" max="9" value="{{param.downB}}" show-value activeColor="#36c5f7" />
+                        <view>成</view>
+                    </view>
+                </view>
+            </view>
+            <view class='items'>
+                <view class='top'>
+                    <view class='item-l'>公积金贷款期限</view>
+                    <view class='item-r'>
+                        <view class='input'>{{param.yearB}}年</view>
+                        <view>（{{param.yearB*12}}期）</view>
+                    </view>
+                </view>
+                <view class='slider'>
+                    <slider bindchange="getYearB" min="1" max="30" value="{{param.yearB}}" show-value activeColor="#36c5f7" />
+                    <view>年</view>
+                </view>
+            </view>
+            <view class='item' bindtap='onRateTab' data-idx='1'>
+                <view class='item-l'>公积金贷款利率</view>
+                <view class='item-r'>
+                    <view class='input'>{{param.rateB}}</view>
+                    <view class='unit'>
+                        <text>%</text>
+                        <image src='./arrow.png'></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        
+        <view>
+            <button class='btn' bindtap='onSendTab'>开始计算</button>
+        </view>
+
+    </view>
+    <view class='descript-box'>
+        <view class='descript'>当前年限基准利率：商业贷款4.9%，公积金贷款3.25%。</view>
+        <view class='descript'>等额本息：每月按相等的金额偿还贷款本息，其中本金逐月递增，利息逐月递减，月还款额不变。</view>
+        <view class='descript'>等额本金：每月按相等的金额偿还贷款本金，其中本金保持相同，利息逐月递减，月还款额越来越少。</view>
+    </view>
+</view>

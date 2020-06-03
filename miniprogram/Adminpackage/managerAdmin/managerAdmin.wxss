@@ -1,0 +1,185 @@
+/* Adminpackage/managerAdmin/managerAdmin.wxss */
+/* Adminpackage/StaffInfo/StaffInfo.wxss */
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.list-box {
+    margin: 5px;
+}
+
+.tips-box {
+    margin: 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: bold;
+    /* color: grey; */
+}
+
+.desc {
+    font-size: 12px;
+    color: grey;
+}
+
+.btn {
+    margin: 10px 20px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.bg-blue {
+    background-color: #42A5F5;
+}
+
+.bg-green {
+    background-color: #42f5ec;
+}
+
+.text-grey {
+    color: grey;
+}
+
+/* 添加按钮 */
+.add-box {
+    /* height: 50px; */
+    margin: 5px 15px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    background-color: #fff;
+}
+
+image {
+    width: 30px;
+    height: 30px;
+}
+
+/* 信息卡片 */
+.staff-card {
+    margin: 5px 15px;
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    background-color: #fff;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: honeydew;
+}
+
+.icon image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.info-box {
+    margin-left: 10px;
+}
+
+.info {
+    font-size: 14px;
+    /* height: 35px; */
+    font-weight: bold;
+    /* line-height: 35px; */
+}
+
+.note {
+    /* height: 10px; */
+    font-size: 10px;
+    /* line-height: 10px; */
+    /* background-color: hotpink; */
+}
+
+
+.input-box {
+    margin: 5px 15px;
+    padding: 28px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.input-item {
+    height: 40px;
+    line-height: 40px;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: bold;
+    /* margin: 20px; */
+}
+
+input {
+    /* height: 40px; */
+    padding: 5px;
+    border-bottom: 1rpx #42A5F5 solid;
+}
+
+.input-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-desc {
+    margin: 20px 0px;
+    font-size: 12px;
+    color: grey;
+}
+
+.input-button {
+    width: 100%;
+    height: 40px;
+    display: inline-flex;
+    color: #fff;
+    /* background-color: hotpink; */
+}
+
+.input-button view {
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.cancle-btn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.confirm-btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.scan-box{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.title{
+    font-size: 12px;
+    font-weight: bold;
+    /* color: grey; */
+    margin-bottom: 20px;
+}
+
+.nocode-box{
+    width: 300rpx;
+    height: 300rpx;
+}

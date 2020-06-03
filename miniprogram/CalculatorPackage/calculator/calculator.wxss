@@ -1,0 +1,114 @@
+page {
+  background: #fff;
+  font-size: 30rpx;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 10rpx solid #f5f5f5;
+}
+
+.nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+.choose {
+  color: #36c5f7;
+}
+
+.content {
+  border-bottom: 10rpx solid #f5f5f5;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30rpx 20rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.top {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.item-r {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.input {
+  text-align: right;
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-right: 10rpx;
+}
+
+.unit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.unit image {
+  display: block;
+  width: 20rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.item-r {
+  position: relative;
+}
+.radio-box {
+  position: absolute;
+  right: 0;
+}
+radio {
+  transform: scale(0.7);
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 0;
+}
+
+.slider slider {
+  flex: 1;
+  margin: 0 10rpx 0 30rpx;
+}
+
+.btn {
+  width: 690rpx;
+  height: 90rpx;
+  margin: 30rpx;
+  text-align: center; 
+  background: #36c5f7;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.descript-box {
+  padding: 30rpx 0;
+}
+.descript {
+  line-height: 50rpx;
+  padding: 0 30rpx;
+  color: #999;
+  font-size: 26rpx;
+  background: #fff;
+}

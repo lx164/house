@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "设置管理员",
+  "navigationBarBackgroundColor": "#FFF",
+  "navigationBarTextStyle":"black",
+  "usingComponents": {
+    "qrcode": "../component/qrcode/index"
+  }
+}

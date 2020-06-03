@@ -1,0 +1,14 @@
+/* pages/mycollection/mycollection.wxss */
+.list-box{
+    margin: 8px 10px;
+}
+
+.tips-box{
+    /* height: 250rpx; */
+    margin: 15rpx 30rpx;
+    border-radius: 15rpx;
+    padding: 25rpx;
+    font-size: 24rpx;
+    color:grey;
+    background-color: #ffffff;
+}

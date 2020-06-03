@@ -1,0 +1,31 @@
+<!--Adminpackage/managerEntrust/managerEntrust.wxml-->
+<van-tabs animated='true' color='#0081ff' border='false' bind:click='ChangeTab'>
+	<van-tab title="待审核" info="{{CheckingEntrustList.length?CheckingEntrustList.length:''}}">
+		<view class="list-box" wx:for="{{CheckingEntrustList}}" wx:key='key' data-type="unpublished" data-id="{{item['_id']}}" bindtap="Navigate">
+			<view class="title">{{index+1}}、委托人：{{item.FormData.name}}</view>
+			<view class="desc">委托人联系方式：{{item.FormData.phonenumber}}</view>
+			<view class="desc">委托发布时间：{{item.updateTime}}</view>
+			<view class="desc">委托类型：<text class="text-blue">{{item.EntrustType=="sale"?'出售':'出租'}}</text></view>
+			<view class="desc">审核状态：<text class="text-red">待审核</text></view>
+			<view class="desc">发布状态：<text class="text-red">未发布</text></view>
+			<view class="desc">房源详细地址：{{item.FormData.detailLocation}}</view>
+			<view class="desc text-blue">说明：点击卡片查看详情并进行审核发布</view>
+		</view>
+        <view class="list-box desc" wx:if='{{CheckingEntrustList.length==0}}'>暂时没有待审核的委托~</view>
+	</van-tab>
+	<van-tab title="已发布" dot='true'>
+		<view class="list-box" wx:for="{{publishedEntrustList}}" wx:key='key' data-type="published" data-id="{{item['_id']}}" bindtap="Navigate">
+			<view class="desc publishtitle">{{index+1}}、发布标题：{{item.title}}</view>
+            <view class="desc">委托人：{{item.FormData.name}}</view>
+			<view class="desc">委托人联系方式：{{item.FormData.phonenumber}}</view>
+			<view class="desc">委托类型：{{item.EntrustType=="sale"?'出售':'出租'}}</view>
+            <view class="desc">委托发布时间：{{item.updateTime}}</view>
+			<view class="desc">审核状态：<text class="text-blue">已审核 {{item.checkedBy?item.checkedBy:''}}（{{item.checkedTime?item.checkedTime:''}}）</text></view>
+			<view class="desc">发布状态：<text class="text-blue">已发布 {{item.checkedBy?item.checkedBy:''}}（{{item.publishTime?item.publishTime:''}}）</text></view>
+			<view class="desc">房源详细地址：{{item.FormData.detailLocation}}</view>
+			<view class="desc text-red">说明：点击卡片即可查看和修改发布详情；</view>
+			<!-- <view class="desc text-red">2、修改：如需进行修改,请长按卡片,选择 “撤销发布”,然后重新审核发布即可。</view> -->
+		</view>
+        <view class="list-box desc" wx:if='{{publishedEntrustList.length==0}}'>暂时没有已经发布的委托哦~</view>
+	</van-tab>
+</van-tabs>

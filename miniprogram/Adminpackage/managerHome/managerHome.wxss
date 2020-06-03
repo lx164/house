@@ -1,0 +1,12 @@
+/* pages/managerHome/managerHome.wxss */
+.list-box {
+    height: 135px;
+    /* margin: 10px 0; */
+    /* background-color: #ffffff; */
+    /* text-align: center; */
+    /* line-height: 50px; */
+}
+.list-box image{
+    width: 100%;
+    height: 100%;
+}

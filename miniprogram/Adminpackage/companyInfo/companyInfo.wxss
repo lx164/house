@@ -1,0 +1,41 @@
+/* Adminpackage/companyInfo/companyInfo.wxss */
+.tips-box {
+    margin: 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: bold;
+    /* color: grey; */
+}
+
+.desc {
+    font-size: 12px;
+    color: grey;
+}
+
+.btn {
+    margin: 10px 20px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.bg-blue {
+    background-color: #42A5F5;
+}
+
+.bg-green {
+    background-color: #42f5ec;
+}
+
+textarea{
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 14px;
+    border: 1rpx rgb(231, 228, 228) solid;
+}

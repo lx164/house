@@ -1,0 +1,86 @@
+<view class="wrap">
+  <view class='nav'>
+    <view class="{{param.repayChoose == 0 ? 'choose' : ''}}" bindtap='onNavTab' data-idx='0'>等额本息</view>
+    <view class="{{param.repayChoose == 1 ? 'choose' : ''}}" bindtap='onNavTab' data-idx='1'>等额本金</view>
+  </view>
+  <view class='top'>
+    <view class='title-a'>{{param.navChoose == 2 ? '贷款总额' : param.repayChoose == 0 ? '每月还款' : '首月还款'}}（万元）</view>
+    <view class='price-a'>{{param.repayChoose == 0 ? show.repayA : show.repayB}}</view>
+    <view class='cut-a' wx:if="{{param.repayChoose == 1 && param.navChoose != 2}}">每月递减{{show.dec}}元</view>
+    <view class='item'>
+      <view>
+        <view>利息总额（万元）</view>
+        <view>{{param.repayChoose == 0 ? show.interestA : show.interestB}}</view>
+      </view>
+      <view>
+        <view>还款总额（万元）</view>
+        <view>{{param.repayChoose == 0 ? show.allA : show.allB}}</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{param.navChoose == 2}}">
+    <view class='title'>商业贷款</view>
+    <view class='tops top'>
+      <view class='title-a'>{{param.repayChoose == 0 ? '每月' : '首月'}}还款（元）</view>
+      <view class='price-a'>{{param.repayChoose == 0 ? show1.repayA : show1.repayB}}</view>
+      <view class='cut-a' wx:if="{{param.repayChoose == 1}}">每月递减{{show1.dec}}元</view>
+      <view class='item'>
+        <view>
+          <view>贷款金额（万元）</view>
+          <view>{{show1.allMoney}}</view>
+        </view>
+        <view>
+          <view>贷款期限</view>
+          <view>{{show1.year}}年（{{show1.month}}期）</view>
+        </view>
+      </view>
+      <view class='item'>
+        <view>
+          <view>利息总额（万元）</view>
+          <view>{{param.repayChoose == 0 ? show1.interestA : show1.interestB}}</view>
+        </view>
+        <view>
+          <view>还款总额（万元）</view>
+          <view>{{param.repayChoose == 0 ? show1.allA : show1.allB}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='title'>公积金贷款</view>
+    <view class='tops top'>
+      <view class='title-a'>{{param.repayChoose == 0 ? '每月' : '首月'}}还款（元）</view>
+      <view class='price-a'>{{param.repayChoose == 0 ? show2.repayA : show2.repayB}}</view>
+      <view class='cut-a' wx:if="{{param.repayChoose == 1}}">每月递减{{show2.dec}}元</view>
+      <view class='item'>
+        <view>
+          <view>贷款金额（万元）</view>
+          <view>{{show2.allMoney}}</view>
+        </view>
+        <view>
+          <view>贷款期限</view>
+          <view>{{show2.year}}年（{{show2.month}}期）</view>
+        </view>
+      </view>
+      <view class='item'>
+        <view>
+          <view>利息总额（万元）</view>
+          <view>{{param.repayChoose == 0 ? show2.interestA : show2.interestB}}</view>
+        </view>
+        <view>
+          <view>还款总额（万元）</view>
+          <view>{{param.repayChoose == 0 ? show2.allA : show2.allB}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='item items' wx:if="{{param.navChoose != 2}}">
+    <view>
+      <view>贷款金额（万元）</view>
+      <view>{{show.allMoney}}</view>
+    </view>
+    <view>
+      <view>贷款期限</view>
+      <view>{{show.year}}年（{{show.month}}期）</view>
+    </view>
+  </view>
+  <view class='admire'>以上结果仅供参考，请以当地实际情况为准。</view>
+</view>

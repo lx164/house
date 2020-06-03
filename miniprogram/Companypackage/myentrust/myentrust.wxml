@@ -1,0 +1,36 @@
+<!--pages/myentrust/myentrust.wxml-->
+<van-tabs bind:click="ChangeTab">
+	<van-tab title="卖房委托" id='sale' info="{{saleEntrustList.length?saleEntrustList.length:''}}">
+		<view class="list-box" wx:for="{{saleEntrustList}}" wx:key='key' data-data="{{saleEntrustList[index]}}" bindtap="Navigate">
+			<!-- tag -->
+			<view class="tag-box">
+				<image src="{{item.publish?'../image/published.png':'../image/checking.png'}}"></image>
+			</view>
+			<view decode="true" class="title">{{index+1}}、{{item.title?item.title:''}}</view>
+			<view decode="true" class="desc">房型：{{item.FormData.houseStyle}}</view>
+			<view decode="true" class="desc">审核状态：<text class="{{item.checkedTime?'text-blue':'text-red'}}">{{item.checkedTime?'审核完成':'待审核'}} {{item.checkedTime?item.checkedTime:''}}</text></view>
+			<view decode="true" class="desc">发布状态：<text class="{{item.publish?'text-blue':'text-red'}}">{{item.publish?'已发布':'未发布'}} {{item.publishTime?item.publishTime:''}}</text></view>
+			<view decode="true" class="desc">详细地址：{{item.FormData.detailLocation}}</view>
+			<view decode="true" class="desc">发布时间：{{item.updateTime}}</view>
+			<view decode="true" class="desc">说明：点击卡片可查看详情</view>
+		</view>
+		<view class="list-box desc" wx:if='{{saleEntrustList.length==0}}'>暂时没有发布过卖房委托~</view>
+	</van-tab>
+
+	<van-tab title="出租委托" id='rentout' info="{{rentOutEntrustList.length?rentOutEntrustList.length:''}}">
+		<view class="list-box" wx:for="{{rentOutEntrustList}}" wx:key='key' data-data="{{rentOutEntrustList[index]}}" bindtap="Navigate">
+			<!-- tag -->
+			<view class="tag-box">
+				<image src="{{item.publish?'../image/published.png':'../image/checking.png'}}"></image>
+			</view>
+			<view decode="true" class="title_rentout">{{index+1}}、{{item.title?item.title:''}}</view>
+			<view decode="true" class="desc">房型：{{item.FormData.houseStyle}}</view>
+			<view decode="true" class="desc">审核状态：<text class="{{item.checkedTime?'text-blue':'text-red'}}">{{item.checkedTime?'审核完成':'待审核'}} {{item.checkedTime?item.checkedTime:''}}</text></view>
+			<view decode="true" class="desc">发布状态：<text class="{{item.publish?'text-blue':'text-red'}}">{{item.publish?'已发布':'未发布'}} {{item.publishTime?item.publishTime:''}}</text></view>
+			<view decode="true" class="desc">详细地址：{{item.FormData.detailLocation}}</view>
+			<view decode="true" class="desc">发布时间：{{item.updateTime}}</view>
+			<view decode="true" class="desc">说明：点击卡片可查看详情</view>
+		</view>
+		<view class="list-box desc" wx:if='{{rentOutEntrustList.length==0}}'>暂时没有发布过出租委托~</view>
+	</van-tab>
+</van-tabs>

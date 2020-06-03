@@ -1,0 +1,93 @@
+page {
+  font-size: 26rpx;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  background: #36c5f7;
+  color: #f5f5f5;
+}
+.nav view {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.choose {
+  position: relative;
+  color: #fff;
+}
+.choose::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rpx;
+  background: #fff;
+}
+
+.top {
+  padding: 30rpx;
+  background: #4dc8f5;
+  color: #fff;
+}
+.tops {
+  background: #fff;
+  color: #333;
+}
+.price-a {
+  font-size: 46rpx;
+  font-weight: 600;
+}
+.cut-a {
+  font-size: 24rpx;
+  color: #ddd;
+}
+.tops .cut-a {
+  font-size: 24rpx;
+  color: #999;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+}
+.item>view {
+  flex: 1;
+  padding: 30rpx 0;
+}
+.item>view:nth-child(1) {
+  position: relative;
+}
+.item>view:nth-child(2) {
+  padding-left: 30rpx;
+}
+.item>view:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 1px;
+  height: 60%;
+  background: #fff;
+}
+.item>view>view:nth-child(2) {
+  font-size: 34rpx;
+}
+.items {
+  padding: 20rpx 30rpx;
+  background: #fff;
+  border-bottom: 1px solid #f5f5f5;
+}
+.items>view:nth-child(1)::after {
+  background: #f5f5f5;
+}
+.admire, .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  color: #999;
+}
+.title {
+  background: #f5f5f5;
+}

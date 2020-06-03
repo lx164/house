@@ -1,0 +1,4 @@
+<view class='qrcode'>
+  <image src="{{qrcodeURL}}" bindlongpress='save' style="width:{{width}}rpx; height:{{width}}rpx;margin:0 auto;"> </image>
+  <slot name="text"></slot>
+</view>

@@ -1,0 +1,45 @@
+<!--pages/login/login.wxml-->
+<view wx:if="{{showform&!showAuth}}">
+	<van-nav-bar title="注册登录" left-text="返回首页" bind:click-left="onClickLeft" />
+</view>
+
+
+<view class="form-box" wx:if="{{showform&!showAuth}}">
+	<!-- 输入框 -->
+	<view class="cu-form-group border-top-left-radius">
+		<view class='title'>
+			<text decode="true">&nbsp;&nbsp;<text decode="true" style="color:#EE0A24;">*</text>姓名：</text>
+		</view>
+		<input placeholder="输入你的真实姓名" class='radius' id="name" type="text" maxlength='5' style='color:#0080ff;' bindinput="InputData"></input>
+	</view>
+	<!-- 输入框 -->
+	<view class="cu-form-group">
+		<view class='title'>
+			<text decode="true">&nbsp;&nbsp;<text decode="true" style="color:#EE0A24;">*</text>手机：</text>
+		</view>
+		<input placeholder="输入你的手机号码" class='radius' id="phone" type="number" maxlength='11' style='color:#0080ff;' bindinput="InputData"></input>
+	</view>
+	<!-- 说明 -->
+	<view class="desc">
+		<text decode='true'>说明：请填写你的真实姓名和有效的手机号，方便我们及时联系到您。</text>
+	</view>
+	<!-- 按钮 -->
+	<view class="cu-form-group" style="margin-top:10px;">
+		<button class="cu-btn" style="background-color:#1989fa;color:#ffffff;" bindtap="SubmitRegister">注 册</button>
+	</view>
+</view>
+
+
+
+<!-- <view wx:if="{{showAuth}}">
+	<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+</view> -->
+
+<view class="auth-box" wx:if="{{showAuth}}">
+	<view class="card-box">
+		<view class="card-content">
+			<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">确 定</button>
+		</view>
+		<image src='../image/modal.png'></image>
+	</view>
+</view>

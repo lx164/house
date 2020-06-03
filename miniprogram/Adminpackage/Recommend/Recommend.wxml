@@ -1,0 +1,35 @@
+<!--Adminpackage/Recommend/Recommend.wxml-->
+<!--pages/mycollection/mycollection.wxml-->
+<view class="tips-box" wx:if='{{!showlist}}'>
+	<view class="title">使用说明</view>
+	<view class="desc" style="color:#42A5F5;">使用前请先简单阅读以下使用说明：</view>
+	<view class="desc">1、显示有 “已推荐” 标志的表示已经推荐过的了；</view>
+	<view class="desc">2、如果要推荐某个房源的话，直接点击那个房源的信息，设置推荐指数，最后点击确定即可；</view>
+	<view class="desc">3、取消某个房源的推荐同上，直接点击那个房源的信息，按照提示操作即可；</view>
+	<view class="desc">4、推荐指数越大，推荐排名越靠前，根据实际需要进行设置即可；</view>
+	<view class="desc" style="color:#42A5F5;">【注意】：只能推荐已经审核发布的房源。</view>
+	<view class="btn" bindtap="showList">阅读完毕</view>
+</view>
+
+<view wx:if='{{showlist}}' wx:for='{{HouseList}}' wx:key='list' data-id="{{item._id}}" data-isrecommend="{{item.recommendData.Isrecommend}}" data-index="{{index}}" class="list-box" data-stats="open" bindtap="DoRecommend">
+	<van-card tag="{{item.recommendData.Isrecommend?'已推荐':''}}" desc1="房子地点地点：{{item.FormData.location}}" desc2="房子信息：{{item.FormData.houseStyle}} {{item.FormData.area}}/㎡(推荐指数:{{item.recommendData.weight?item.recommendData.weight:'无'}})" desc3="推荐信息：{{item.recommendData.recommender}} {{item.recommendData.updatetime}} {{item.recommendData.Isrecommend?'推荐':'尚未设置推荐（点击即可推荐）'}}" title="{{item.title}}" thumb="{{item.photoInfo[0]?item.photoInfo[0]:'../image/image.png'}}" />
+</view>
+
+<view class="Nodata-tips-box" wx:if='{{showlist&&HouseList.length==0}}'>只能推荐已经审核发布的房源~</view>
+
+<!-- 输入框蒙版 -->
+<!-- modal 弹窗 -->
+<view class="cu-modal {{showModal?'show':''}}">
+	<view class="cu-dialog" style="width:70%;">
+		<view class="cu-bar bg-white justify-end">
+			<view class='modal-title'>设置推荐指数</view>
+		</view>
+		<view class='bg-white margin text-blue'>
+			<input type="number" style="border:1rpx solid #e7ebed;margin:auto;width:70%;height:40px;" maxlength='2' placeholder="指数范围：1~10" bindinput='InputData' value="{{formdata.weight}}"></input>
+		</view>
+		<view class="text-center" style="width:100%;height:50px;">
+			<view class='bg-grey light modal-btn' bindtap="CloseInputBox">取消</view>
+			<view class='bg-green light modal-btn' bindtap="ConfirmBtn">确定</view>
+		</view>
+	</view>
+</view>

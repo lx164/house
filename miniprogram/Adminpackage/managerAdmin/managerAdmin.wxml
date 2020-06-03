@@ -1,0 +1,48 @@
+<!--Adminpackage/managerAdmin/managerAdmin.wxml-->
+<view class="tips-box" wx:if='{{IsAuthor&&showlist &&!showCode}}'>
+	<view class="title">设置管理员使用说明</view>
+	<view class="desc" style="color:#42A5F5;">使用前请先简单阅读以下使用说明：</view>
+	<view class="desc">1、管理员具有管理后台的权限；</view>
+	<view class="desc">2、添加：击下面的加号添加新的管理员；</view>
+	<view class="desc">3、删除：长按对应管理员信息卡片即可删除；</view>
+	<view class="desc">3、请注意把控好管理员的数量,避免权限被滥用；</view>
+	<view class="desc">【注意】：点击下面的加号添加新的管理员。</view>
+</view>
+
+<!-- 添加按钮 -->
+<view class="add-box" bindtap="ShowQRCode" wx:if="{{IsAuthor&&!showCode}}">
+	<image src="../images/add.png"></image>
+</view>
+
+<!-- 员工信息列表 -->
+<view class="staff-card" wx:if="{{IsAuthor&&UserList.length>0&&!showCode}}" wx:for='{{UserList}}' data-id="{{item._id}}" data-openid='{{item._openid}}' data-name="{{item.name}}" data-phone="{{item.phone}}" bindlongtap="EditInfo">
+	<view class="icon">
+		<image src="{{item.avatarUrl}}"></image>
+	</view>
+	<view class="info-box">
+		<view class="info">姓名：{{item.name}} <text wx:if="{{item.level=='0'||item.level=='1'}}" style="font-size:10px;color:#D53514;">({{item.level =='0'?'超级管理员':'普通管理员'}})</text></view>
+		<view class="info">电话：{{item.phone}}</view>
+		<view class="note text-grey">添加时间：{{item.updatetime}}</view>
+		<view class="note text-grey">说明：如需《修改》该员工信息,请《长按》该名片。</view>
+	</view>
+</view>
+
+<view class="tips-box" wx:if='{{!IsAuthor}}'>
+	<view class="desc">你的权限不足,无法使用该板块!</view>
+</view>
+
+<!-- 二维码 -->
+<view class="scan-box" wx:if='{{IsAuthor && showCode}}'>
+	<view class="title">使用说明：给需要添加的管理员扫描下面的二维码。请注意不要泄露该二维码给其他无关的用户,使用时只能在设置某个用户为管理员时给其扫描,以免造成管理员权限的泄露。二维码只能使用一次,用完就马上失效。</view>
+	<!-- 二维码组件-->
+	<qrcode class="iblock" value="{{QRcodeData}}" width="300" wx:if="{{QrcodeStats}}">
+		<view slot="text">
+			<text style="color:grey;font-size:12px;">扫一扫,添加管理员</text>
+		</view>
+	</qrcode>
+	<view  wx:if="{{!QrcodeStats}}">
+		<image src="../images/qrcode.png" class="nocode-box"></image>
+		<text decode="true" style="color:grey;font-size:12px;">\n该二维码已失效,请返回重新获取</text>
+	</view>
+
+</view>

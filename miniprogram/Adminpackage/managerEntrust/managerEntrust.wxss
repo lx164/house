@@ -1,0 +1,38 @@
+/* Adminpackage/managerEntrust/managerEntrust.wxss */
+page{
+    background-color: #f0f0f0;
+}
+
+.list-box{
+    /* height: 250rpx; */
+    margin: 15rpx 30rpx;
+    border-radius: 15rpx;
+    padding: 25rpx;
+    background-color: #ffffff;
+}
+
+.title{
+    margin-top: 10rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.publishtitle{
+    margin-top: 10rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.desc{
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color:grey;
+}
+
+.text-red{
+    color: #e26843;
+}
+
+.text-blue{
+    color: #0081ff;
+}

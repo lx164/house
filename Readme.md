@@ -1,0 +1,124 @@
+# 基于微信云开发-租房小程序-带管理员后台
+[TOC]
+
+![image](https://img.shields.io/badge/TAG-云开发-blue.svg) ![image](https://img.shields.io/badge/TAG-租房-blue.svg) ![image](https://img.shields.io/badge/TAG-微信小程序-blue.svg) ![image](https://img.shields.io/badge/TAG-带管理后台-blue.svg)
+
+[![image](https://img.shields.io/badge/author-lx164-orange.svg)](https://github.com/lx164/) [![image](https://img.shields.io/badge/CSDN-lx9625_鹤鹤-orange.svg)](https://blog.csdn.net/github_38967228) [![image](https://img.shields.io/badge/博客园-LiangSenCheng小森森-orange.svg)](https://www.cnblogs.com/LiangSenCheng/)
+
+
+项目地址：https://github.com/lx164/
+
+> 发现有问题？欢迎加我微信一起探讨，或者直接提Issues
+> 无法下载或者下载太慢？可以直接找我要安装包；
+> 
+> 联系方式在这里的首页：https://www.cnblogs.com/LiangSenCheng/p/11083714.html
+
+## 项目简介
+
+本项目是2019年12月份左右的产物，花了大概一个月时间做完之后一直遗忘在了硬盘里，这几天才想起来，故顺便整理一下开源了。
+
+> 项目虽然没有做的很完整，但是整体的数据架构还算是可以的，可以很容易进行功能完善和添加新功能。里面还有很多可以完善的地方，比如 `公司资质` 页面可以做的更加精细一些，`房子详情页` 可以添加地图之类的内容等。
+
+原本是别人找我帮一家中介小店些的一个租房小程序，对方没给设计图、也没有提具体需求，只是让我凭感觉来做。由于没有写过这方面的小程序，也没有很好的规划页面布局，所以UI方面稍微差了点。在项目快完成的时候，介绍的那个人跑路了，所以就没有后续了，想着与其直接删除还不如开源分享给大家一起讨论学习。
+
+这个项目的经历也让我明白了一些事情，就是如果别人委托自己帮做项目的时候，不管项目的规模如何，在接受委托前一定要考虑清楚。特别是没有付定金的这种委托，一定要谨慎，不要期望那种说你先做着后面再谈钱，哪怕是跟你认识的人也是一样要谨慎。还有就是不提明确需求的也不要轻易接受，这种人很容易中途变卦的。如果不想清楚的话，机会浪费时间又浪费精力。
+
+> 本程序已经经过测试，拿来按照说明简单配置就可以直接使用,界面可以自己进行修改。本人热爱小程序，目前上线并维护的有两个，后面看情况再找时间进行开源。
+由于本人的能力有限，还有很多地方没法完善，望指正！
+
+## 目录结构
+
+```
+|--|-- cloudfunctions 云函数
+|--|--|--|-- AdminManage
+|--|--|--|-- Entrust
+|--|--|--|-- HouseInfo
+|--|--|--|-- InitInfo
+|--|--|--|-- Manager
+|--|--|--|-- PublishEntrust
+|--|-- miniprogram 小程序页面
+|--|--|--Adminpackage 管理员后台（分包）
+|--|--|--|--略
+|--|--|--CalculatorPackage 房贷计算器（分包）
+|--|--|--|--略
+|--|--|--Companypackage 主要页面（分包）
+|--|--|--|--略
+|--|--|--dist 一些用到的组件，只用到了一小部分
+|--|--|--pages 主包（主要是底部NaviBar页面）
+|--|--|--|--略
+|--|--其他页面略
+|--README.md
+```
+
+## 功能说明
+
+1. 新房、租房、二手房
+2. 房贷计算器
+3. 公司介绍
+4. 公告
+5. 管理员
+
+> 1-4 点都没啥好说的，下面主要介绍一下 `管理员后台的实现`
+
+`管理员后台集成在了小程序端`，入口隐藏在 `个人中心` 页面 `连续点击5次` 头像名字那里，就可以进入到管理员后台，进入后台的时候会在 `云函数AdminManage`进行管理员鉴权：
+
+- 如果不是管理员，会跳转到扫码加入管理员；
+- 如果是管理员，那就跳转到管理员后台；
+
+> 由于管理员数据库设置了权限为 `所有用户不可读写` ，因此鉴权是只能在云函数里面进行，这是第一道防线；后面在管理员后台的操作都是在云函数完成的，即使是小程序被反编译了，也不可能突破权限，安全性上还是经得住考验的。
+
+## 配置过程
+
+1. 直接下载源码,源码地址：https://github.com/lx164
+或者clone项目 git clone https://github.com/lx164/
+
+2. 打开微信开发者工具，导入项目（导入的时候请选择 APP 文件夹）；
+
+3. 填写APPID；
+
+4. 开通云开发环境（请参考官方文档）；
+
+5. 新建以下数据库集合,一行为一个集合名（不要写错）：
+
+```
+    AdminStator
+    Collections
+    CompanyInfo
+    ContactList
+    Entrust
+    NewHouse
+    Recommend
+    RentingHouse
+    SecondHouse
+    TempCllection
+    UserList
+```
+「注意」： 集合`AdminStator`权限设置为`所有用户不可读写`，其余的集合权限修改为：`所有用户可读，仅创建者可读写`。
+
+6. 设置管理员信息，在 `AdminStator` 新建一条记录，把以下的字段内容添加到该记录中，下面（）里的内容根据你的实际情况填写：
+
+```json
+    "level":0,
+    "avatarUrl":"(头像)",
+    "updatetime":"(2020/06/01 06:01:18)",
+    "_openid":"(管理员的openid)",
+    "name":"(管理员名字)",
+    "phone":"(管理员手机)"
+```
+
+7. 上传 `cloudfunctions` 文件夹下所有的云函数，上传时选择 `上传并部署：云端安装依赖`；
+
+8. 编译运行。
+
+## 界面预览
+
+![image](https://s1.ax1x.com/2020/06/03/twik8g.jpg) ![image](https://s1.ax1x.com/2020/06/03/twiZKs.jpg) ![image](https://s1.ax1x.com/2020/06/03/twiern.jpg) ![image](https://s1.ax1x.com/2020/06/03/twAA2D.jpg) ![image](https://s1.ax1x.com/2020/06/03/twitq1.jpg)![image](https://s1.ax1x.com/2020/06/03/twiaa6.jpg)![image](https://s1.ax1x.com/2020/06/03/twidIK.png)![image](https://s1.ax1x.com/2020/06/03/twi0PO.jpg)![image](https://s1.ax1x.com/2020/06/03/twi324.jpg)![image](https://s1.ax1x.com/2020/06/03/twiDRe.jpg)![image](https://s1.ax1x.com/2020/06/03/twiRdP.jpg)![image](https://s1.ax1x.com/2020/06/03/twiFPS.jpg)![image](https://s1.ax1x.com/2020/06/03/twihi8.jpg)![image](https://s1.ax1x.com/2020/06/03/twi9VP.jpg)![image](https://s1.ax1x.com/2020/06/03/twPXgH.jpg)
+
+## 结语
+
+欢迎一起探讨，如果你觉得还可以，您可以给我点一个start，或者赞赏我
+![zanshang](https://blog-static.cnblogs.com/files/LiangSenCheng/zanshang.gif)
+
+## 参考文档
+
+- [微信小程序云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)

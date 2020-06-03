@@ -1,0 +1,52 @@
+page {
+  font-size: 26rpx;
+}
+.title {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  background: #f5f5f5;
+  color: #999;
+}
+.item {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  font-size: 26rpx;
+  background: #fff;
+  border-bottom: 1px solid #f5f5f5;
+}
+.cal-item {
+  display: flex;
+  flex-direction: row;
+  padding:  0 30rpx;
+  align-items: center;
+}
+.cal-item input {
+  width: 100rpx;
+  height: 80rpx;
+  padding: 0 10rpx;
+  color: #999;
+}
+.cal-item input:nth-child(3) {
+  text-align: center;
+}
+.cal-item view {
+  padding: 0 10rpx;
+}
+.cal-item view:nth-child(4) {
+  flex: 1;
+}
+.cal-item button {
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  background: #36c5f7;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+}
+.choose {
+  color: #36c5f7;
+}

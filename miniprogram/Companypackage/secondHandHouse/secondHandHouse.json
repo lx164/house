@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "二手房-找房",
+    "navigationBarBackgroundColor": "#4489F2",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true,
+    "usingComponents": {}
+}

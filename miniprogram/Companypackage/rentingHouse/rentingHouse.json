@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "租房-租房就来找我",
+  "navigationBarBackgroundColor": "#FEB054",
+  "navigationBarTextStyle":"white",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

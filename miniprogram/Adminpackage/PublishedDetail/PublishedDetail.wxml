@@ -1,0 +1,62 @@
+<!--Adminpackage/EntrustDetail/EntrustDetail.wxml-->
+<!-- 步骤1 -->
+<view class="list-box">
+	<view class="desc">提示：以下是已经发布的房源详情。</view>
+	<view class="desc text-blue" style="color:#ff0080;">如需修改、删除该房源信息,请查看本页面的底部。</view>
+</view>
+
+<!-- 步骤2 -->
+<view class="list-box">
+	<view class="title">房子详细信息：（{{StatusList.EntrustType=='sale'?'出售':'出租'}}）</view>
+	<view class="desc" wx:for="{{DetialList}}" wx:key='key' data-id="{{item['_id']}}" bindtap="Navigate">{{item.title}}：<text class="text-blue">{{item.value?item.value:'无'}}</text></view>
+	<view class="desc">发布委托时间：<text class="text-blue">{{StatusList.updateTime?StatusList.updateTime:'无'}}</text></view>
+</view>
+
+<!-- 步骤3 -->
+<view class="list-box">
+	<view class="title">审核发布信息：</view>
+	<view class="desc">审核人：{{StatusList.checkedBy}}</view>
+	<view class="desc">审核时间：{{StatusList.checkedTime}}</view>
+	<view class="desc">发布人：{{StatusList.checkedBy}}</view>
+	<view class="desc">发布时间：{{StatusList.publishTime}}</view>
+	<view class="desc">审核发布状态：<text class="text-red">{{StatusList.checkedTime?'已审核':'待审核'}} {{StatusList.publish?'已发布':'未发布'}}</text></view>
+</view>
+
+<!-- 步骤4 -->
+<view class="list-box">
+	<view class="title">首页推荐信息:</view>
+	<view class="desc" style="color:grey;">是否首页推荐：{{recommendData.Isrecommend?'是':'否'}}</view>
+	<view class="desc" style="color:grey;">推荐人：{{recommendData.Isrecommend?recommendData.recommender:'无'}}</view>
+	<view class="desc" style="color:grey;">推荐时间：{{recommendData.Isrecommend?recommendData.updatetime:'无'}}</view>
+	<view class="desc" style="color:grey;">推荐指数：{{recommendData.Isrecommend?recommendData.weight:'无'}}</view>
+</view>
+
+<view class="list-box">
+	<view class="title">委托人上传的房屋照片(共{{photoInfo.length?photoInfo.length:0}}张)</view>
+	<image wx:for="{{photoInfo}}" src="{{item}}"></image>
+</view>
+
+<!-- 步骤5 -->
+<view class="list-box">
+	<view class="title">发布时设置的标题:</view>
+	<view class="desc" style="color:grey;">{{title}}</view>
+</view>
+
+<!-- 步骤6 -->
+<view class="list-box">
+	<view class="title">负责该房源的人:</view>
+	<view class="desc" style="color:grey;">{{charge.name}} {{charge.phone}}</view>
+</view>
+
+<!-- 步骤7 -->
+
+<view class="list-box">
+	<view class="title">发布到的板块:</view>
+	<view class="tips" style="color:grey;">{{plate}}</view>
+</view>
+
+<!-- 按钮 -->
+<view class="padding flex flex-direction">
+	<button class='cu-btn lg submitbtn' style="background:#0080ff;" bindtap="ChangePublish">修改房源</button>
+	<button class='cu-btn lg submitbtn' style="background:#ff0000;" bindtap="DeleteHouse">删除房源</button>
+</view>

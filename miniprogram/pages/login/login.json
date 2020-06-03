@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "登录授权",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "van-nav-bar": "../../dist/nav-bar/index"
+    }
+}

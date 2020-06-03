@@ -1,0 +1,49 @@
+<!--Adminpackage/StaffInfo/StaffInfo.wxml-->
+<view class="tips-box" wx:if='{{!showlist &&!showinput}}'>
+	<view class="title">设置联系员工信息使用说明</view>
+	<view class="desc" style="color:#42A5F5;">使用前请先简单阅读以下使用说明：</view>
+	<view class="desc">1、设置的员工信息将显示在首页的 “联系员工” 模块；</view>
+	<view class="desc">2、作用：可以让看房的用户第一时间联系到你们；</view>
+	<view class="desc">3、员工的姓名信息将以 “李*华” 或 “李*” 进行展示 ,手机号码信息将会以 “134****0987” 的形式进行展示；</view>
+	<view class="desc">4、看房的用户直接点击员工的名片就能拨打电话联系到你们；</view>
+	<view class="desc">【注意】：点击下面的加号添加新的员工信息。</view>
+	<!-- 
+	<view class="btn bg-blue" bindtap="showList">查看已添加的员工信息</view>
+	<view class="btn bg-green" bindtap="showList">添加员工信息</view> -->
+</view>
+
+<!-- 添加按钮 -->
+<view class="add-box" bindtap="OpenInput" wx:if="{{!showinput}}">
+	<image src="../images/add.png"></image>
+</view>
+
+<view wx:if="{{!showinput}}">
+	<!-- 员工信息列表 -->
+	<view class="staff-card" wx:for='{{UserList}}' data-id="{{item._id}}" data-name="{{item.name}}" data-phone="{{item.phone}}" bindlongtap="EditInfo">
+		<view class="icon">
+			<image src="../images/icon-idcard.png"></image>
+		</view>
+		<view class="info-box"> 
+			<view class="info">姓名：{{item.name}}</view>
+			<view class="info">电话：{{item.phone}}</view>
+			<view class="note text-grey">添加时间：{{item.updatetime}}</view>
+			<view class="note text-grey">说明：如需《修改》该员工信息,请《长按》该名片。</view>
+		</view>
+	</view>
+</view>
+
+<!-- 输入框 -->
+<view class="input-box" wx:if="{{showinput}}">
+	<view class="input-title">{{inputTitle}}</view>
+	<view class="input-item">
+		姓 名：<input type="text" maxlength="5" placeholder="输入姓名" value="{{inputName}}" data-key="name" bindinput="InputData"></input>
+	</view>
+	<view class="input-item">
+		手 机：<input type="number" maxlength="11" placeholder="输入手机号" value="{{inputPhone}}" data-key="phone" bindinput="InputData"></input>
+	</view>
+	<view class="input-desc">【提示】:请填写完整或者修改以上的信息,点击确定保存。</view>
+	<view class="input-button">
+		<view class="bg-blue cancle-btn" bindtap="CloseInput">取 消</view>
+		<view class="bg-green confirm-btn" data-id="{{id}}" data-type="{{type}}" bindtap="Confirm">{{confirmTxt}}</view>
+	</view>
+</view>

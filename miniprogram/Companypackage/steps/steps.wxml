@@ -1,0 +1,5 @@
+<!--pages/steps/steps.wxml-->
+<!-- 步骤条 -->
+<view class="stpe-box">
+	<van-steps steps="{{ steps }}" active="{{ active }}" direction="vertical" active-color="#ee0a24" />
+</view>

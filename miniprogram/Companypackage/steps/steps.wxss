@@ -1,0 +1,5 @@
+/* pages/steps/steps.wxss */
+.stpe-box{
+    margin: 10px 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,17 @@
+<view class="wrap">
+  <view class='title'>自定义</view>
+  <view class='cal-item'>
+    <input type='digit' value="{{i == 0 ? c.a.rate : c.b.rate}}" bindinput='getRateTab'></input>
+    <view>% X</view>
+    <input type='digit' value="{{i == 0 ? c.a.rates : c.b.rates}}"  bindinput='getRatesTab'></input>
+    <view>倍 = {{i == 0 ? c.a.rate * c.a.rates  : c.b.rate * c.b.rates}}%</view>
+    <button bindtap='onCheckTab'>确定</button>
+  </view>
+  <view class='title'>或选择贷款利率</view>
+  <view wx:if="{{i == 0}}">
+    <view class="item {{choose == index ? 'choose' : ''}}" wx:for="{{rateA}}" wx:key="{{index}}" data-idx="{{index}}" bindtap='onGetRateTab'>{{item.title}}</view>
+  </view>
+  <view wx:if="{{i == 1}}">
+    <view class="item {{choose == index ? 'choose' : ''}}" wx:for="{{rateB}}" wx:key="{{index}}" data-idx="{{index}}" bindtap='onGetRateTab'>{{item.title}}</view>
+  </view>
+</view>

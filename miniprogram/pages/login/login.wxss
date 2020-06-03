@@ -1,0 +1,65 @@
+/* pages/login/login.wxss */
+page{
+    width: 100%;
+    height: 100%;
+}
+
+.form-box {
+    padding: 5px;
+    margin:0 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 15%;
+    background-color: #fff;
+}
+
+.desc {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 10px;
+    color: grey;
+    /* background-color: aquamarine; */
+}
+
+.auth-box{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(112,112,112,1);
+}
+
+.card-box{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: aqua; */
+}
+
+.card-box image{
+    width: 250px;
+    height: 300px;
+    background-color: #fff;
+}
+
+.card-content{
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    z-index: 9999;
+    position: absolute;
+    bottom: 15px;
+    /* background-color: sandybrown; */
+}
+
+.card-content button{
+    margin: 0 auto;
+    background-color: #FF7583;
+    color: #fff;
+}

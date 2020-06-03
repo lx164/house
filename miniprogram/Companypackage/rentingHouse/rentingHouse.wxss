@@ -1,0 +1,142 @@
+/* Companypackage/rentingHouse/rentingHouse.wxss */
+/* pages/secondHandHouse/secondHandHouse.wxss */
+/* pages/search/search.wxss */
+page {
+    background-color: #f0f0f0;
+}
+
+view {
+    margin: 0;
+    padding: 0;
+}
+
+.card-box {
+    position: relative;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    font-size: 12px;
+    color: #323233;
+    margin-top:5px;
+    background-color: #ffffff;
+}
+
+.card {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.card-left {
+    position: relative;
+    -webkit-box-flex: none;
+    flex: none;
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+.card-left image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-right {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 16px;
+}
+
+/* 描述 */
+
+.card-content-box {
+    width: 100%;
+    height: 70px;
+    margin-top: 12px;
+    /* background-color: #ee0a24; */
+}
+
+.card-content-box-row-top {
+    width: 100%;
+    height: 40px;
+    /* background-color: #9e2260; */
+}
+
+.card-content-box-row-bottom {
+    width: 100%;
+    /* height: 30px; */
+    margin-top: 5px;
+    /* background-color: #c722bf; */
+}
+
+.content-row {
+    width: 100%;
+    height: 20px;
+    /* background-color: #19b9a4; */
+}
+
+/* 标签 */
+
+/* 左上角的标签 */
+
+.card-tag {
+    display: inline-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    line-height: normal;
+    padding: 0.2em 0.5em;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 0.2em;
+}
+
+.card-tag-box {
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+
+.card-tag:after {
+    border-color: currentColor;
+    border-radius: 0.2em * 2;
+}
+
+.card-tag-mark, .card-tag-mark:after {
+    border-radius: 0 999px 999px 0;
+}
+
+.card-tag-mark {
+    padding-right: 0.7em;
+}
+
+.card-tag-bg {
+    background-color: #ee0a24;
+}
+
+/* 颜色 */
+
+.bg-cyan {
+    background-color: #1cbbb4;
+    color: #fff;
+}
+
+
+.text-grey {
+    color: grey;
+}
+
+.price-text {
+    font-size: 14px;
+    font-weight: 900;
+    color: orangered;
+}
+
+.font-weight {
+    font-weight: bold;
+}
