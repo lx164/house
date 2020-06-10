@@ -2,8 +2,8 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init({
-    env: cloud.DYNAMIC_CURRENT_ENV,
-    traceUser: true
+    env: 'dev-house-0tiax',
+    traceUser: true,
 })
 const db = cloud.database()
 
@@ -59,9 +59,7 @@ exports.main = async (event, context) => {
     if (event.type === 'changeEntrust') {
         // 删除已发布到不同平台的数据
         let dbname = event.publishPlate
-        let del = await db.collection(dbname).where({
-            ID: event.ID
-        }).remove()
+        let del = await db.collection(dbname).where({ ID: event.ID }).remove()
         // 设置为未发布的状态
         let res = await db.collection('Entrust')
             .where({
@@ -95,13 +93,9 @@ exports.main = async (event, context) => {
     if (event.type === 'deleteEntrust') {
         // 删除已发布到不同平台的数据
         let dbname = event.publishPlate
-        let del = await db.collection(dbname).where({
-            ID: event.ID
-        }).remove()
+        let del = await db.collection(dbname).where({ ID: event.ID }).remove()
         // 删除本体数据
-        let res = await db.collection('Entrust').where({
-            _id: event.ID
-        }).remove()
+        let res = await db.collection('Entrust').where({ _id: event.ID }).remove()
         return res
     }
 

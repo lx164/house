@@ -2,8 +2,8 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init({
-    env: cloud.DYNAMIC_CURRENT_ENV,
-    traceUser: true
+    env: 'dev-house-0tiax',
+    traceUser: true,
 })
 const db = cloud.database()
 
@@ -21,8 +21,8 @@ exports.main = async (event, context) => {
             _openid: true,
             name: true,
             phone: true,
-            address: true,
-            manager: true
+            address:true,
+            manager:true
         }).get()
     }
 

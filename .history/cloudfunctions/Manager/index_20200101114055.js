@@ -2,8 +2,8 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init({
-    env: cloud.DYNAMIC_CURRENT_ENV,
-    traceUser: true
+    env: 'dev-house-0tiax',
+    traceUser: true,
 })
 const db = cloud.database()
 
@@ -58,7 +58,7 @@ exports.main = async (event, context) => {
     }
 
     // 更新公司信息
-    if (event.type === 'update-company') {
+    if(event.type==='update-company'){
         let dbname = 'CompanyInfo'
         return await db.collection(dbname)
             .where({
@@ -66,8 +66,8 @@ exports.main = async (event, context) => {
             })
             .update({
                 data: {
-                    introduce: event.introduce,
-                    notice: event.notice,
+                    introduce:event.introduce,
+                    notice:event.notice,
                     editer: event.editer,
                     phone: event.phone,
                     updatetime: event.updatetime

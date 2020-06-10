@@ -2,8 +2,8 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init({
-    env: cloud.DYNAMIC_CURRENT_ENV,
-    traceUser: true
+    env: 'dev-house-0tiax',
+    traceUser: true,
 })
 const db = cloud.database()
 const _ = db.command
@@ -33,7 +33,7 @@ exports.main = async (event, context) => {
                 as: 'EntrustInfo',
             })
             .match({
-                'EntrustInfo.publish': true
+                'EntrustInfo.publish':true
             })
             .project({
                 'ID': true,
@@ -78,7 +78,7 @@ exports.main = async (event, context) => {
                 as: 'EntrustInfo',
             })
             .match({
-                'EntrustInfo.publish': true,
+                'EntrustInfo.publish':true,
                 'EntrustInfo.FormData.roomStyle': RoomStyle
             })
             .project({
@@ -126,7 +126,7 @@ exports.main = async (event, context) => {
                 as: 'EntrustInfo',
             })
             .match({
-                'EntrustInfo.publish': true,
+                'EntrustInfo.publish':true,
                 'EntrustInfo.FormData.totalPrice': _.gte(min).lte(max)
             })
             .project({
@@ -150,7 +150,7 @@ exports.main = async (event, context) => {
                 'EntrustInfo': false
             })
             .end()
-        return res
+            return res
     }
 
 }
