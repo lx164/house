@@ -8,7 +8,7 @@
 
 项目地址：https://github.com/lx164/house
 
-> 如需小程序定制「包括但不限于课设、毕设等」可联系我，联系方式请点击> [博客园](https://www.cnblogs.com/LiangSenCheng)< 的首页；
+***如需小程序定制「包括但不限于课设、毕设等」可联系我，联系方式请点击> [博客园](https://www.cnblogs.com/LiangSenCheng)< 的首页；***
 
 > 发现有问题？欢迎加我微信一起探讨，或者直接提Issues
 > 无法下载或者下载太慢？可以直接找我要安装包；
