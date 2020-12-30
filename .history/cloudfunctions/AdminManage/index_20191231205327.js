@@ -7,8 +7,8 @@ const {
 
 
 cloud.init({
-    env: cloud.DYNAMIC_CURRENT_ENV,
-    traceUser: true
+    env: 'dev-house-0tiax',
+    traceUser: true,
 })
 const db = cloud.database()
 
@@ -19,20 +19,13 @@ exports.main = async (event, context) => {
 
     // 获取管理员权限级别
     if (event.type === 'adminInfo') {
-        let res = await db.collection('AdminStator').where({
-            '_openid': openId
-        }).field({
-            'name': true,
-            'level': true
-        }).get()
+        let res = await db.collection('AdminStator').where({ '_openid': openId }).field({ 'name': true, 'level': true }).get()
         return res
     }
 
     // 获取管理员列表
     if (event.type === 'AdminList') {
-        let count = await db.collection('AdminStator').where({
-            '_openid': openId
-        }).count()
+        let count = await db.collection('AdminStator').where({ '_openid': openId }).count()
         // 再次验证是否为管理员
         if (count.total) {
             var res = await db.collection('AdminStator').orderBy('level', 'asc').get()
@@ -112,9 +105,7 @@ exports.main = async (event, context) => {
 
     // 删除管理员
     if (event.type === 'delete-admin') {
-        let info = await db.collection('AdminStator').where({
-            '_openid': openId
-        }).get()
+        let info = await db.collection('AdminStator').where({ '_openid': openId }).get()
         // 再次验证是否为超级管理员
         if (info.data[0].level === 0) {
             // 检查需要删除的管理员的openid是否与自己的相同
@@ -148,9 +139,7 @@ exports.main = async (event, context) => {
 
     // 获取二维码
     if (event.type === 'qrcode') {
-        let info = await db.collection('AdminStator').where({
-            '_openid': openId
-        }).get()
+        let info = await db.collection('AdminStator').where({ '_openid': openId }).get()
         // 再次验证是否为超级管理员
         if (info.data[0].level === 0) {
             // 生成随机码
@@ -198,9 +187,7 @@ exports.main = async (event, context) => {
                 'updatetime': event.updatetime
             }
         }
-        return {
-            'data': res
-        }
+        return { 'data': res }
     }
 
 }

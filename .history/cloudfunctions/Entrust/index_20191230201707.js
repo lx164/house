@@ -2,8 +2,8 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init({
-    env: cloud.DYNAMIC_CURRENT_ENV,
-    traceUser: true
+    env: 'dev-house-0tiax',
+    traceUser: true,
 })
 const db = cloud.database()
 
@@ -31,13 +31,10 @@ exports.main = async (event, context) => {
                 publishTime: '',
                 checkedBy: '',
                 checkedTime: '',
-                title: '',
+                title:'',
                 plate: '',
-                publishPlate: '',
-                charge: {
-                    'name': '',
-                    'phone': ''
-                },
+                publishPlate:'',
+                charge:{'name': '','phone':'' },
                 updateTime: updateTime,
                 recommendData: {
                     "Isrecommend": false,
@@ -61,7 +58,7 @@ exports.main = async (event, context) => {
             publish: true,
             publishTime: true,
             updateTime: true,
-            title: true,
+            title:true,
             'FormData.detailLocation': true,
             'FormData.houseStyle': true
         }).get()
@@ -75,15 +72,15 @@ exports.main = async (event, context) => {
             'publish': IsPublish
         }).field({
             _id: true,
-            plate: true,
-            publishPlate: true,
+            plate:true,
+            publishPlate:true,
             EntrustType: true,
             checkedBy: true,
             checkedTime: true,
             publish: true,
             publishTime: true,
             updateTime: true,
-            title: true,
+            title:true,
             'FormData.detailLocation': true,
             'FormData.name': true,
             'FormData.phonenumber': true
@@ -95,10 +92,10 @@ exports.main = async (event, context) => {
     if (event.type === 'EntrustDetail') {
         let id = event.id
         const EntrustList = await db.collection(dbname)
-            .orderBy('updateTime', 'desc')
-            .where({
-                '_id': id
-            }).get()
+        .orderBy('updateTime', 'desc')
+        .where({
+            '_id': id
+        }).get()
         return EntrustList
     }
 
