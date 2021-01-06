@@ -1,7 +1,6 @@
 # 基于微信小程序云开发-租房微信小程序-带管理员后台
-[TOC]
 
-![image](https://img.shields.io/badge/TAG-云开发-blue.svg) ![image](https://img.shields.io/badge/TAG-租房-blue.svg) ![image](https://img.shields.io/badge/TAG-微信小程序-blue.svg) ![image](https://img.shields.io/badge/TAG-带管理后台-blue.svg)
+![image](https://img.shields.io/badge/license-MIT-green.svg) ![image](https://img.shields.io/badge/TAG-云开发-blue.svg) ![image](https://img.shields.io/badge/TAG-租房-blue.svg) ![image](https://img.shields.io/badge/TAG-微信小程序-blue.svg) ![image](https://img.shields.io/badge/TAG-带管理后台-blue.svg)
 
 [![image](https://img.shields.io/badge/author-lx164-orange.svg)](https://github.com/lx164/) [![image](https://img.shields.io/badge/CSDN-lx9625_鹤鹤-orange.svg)](https://blog.csdn.net/github_38967228) [![image](https://img.shields.io/badge/博客园-LiangSenCheng小森森-orange.svg)](https://www.cnblogs.com/LiangSenCheng/)
 
