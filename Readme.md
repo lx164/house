@@ -176,6 +176,6 @@
 欢迎一起探讨，如果你觉得还可以，您可以给我点一个start，或者赞赏我
 ![zanshang](https://blog-static.cnblogs.com/files/LiangSenCheng/zanshang.gif)
 
-## 参考文档
+## Strat趋势
 
-- [微信小程序云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+[![Stargazers over time](https://starchart.cc/lx164/house.svg)](https://starchart.cc/lx164/house)
