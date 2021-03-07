@@ -9,19 +9,19 @@
 
 ***如需小程序定制「包括但不限于课设、毕设等」可联系我，联系方式请点击> [博客园](https://www.cnblogs.com/LiangSenCheng)< 的首页；***
 
-***在此奉劝某些人，请尊重作者的劳动成果，做人积点德吧！最近发现有人拿我的源码进行二次分发，不但不标注源码出处，甚至以此牟利。如果你花了钱购买本程序，请积极举报！***
-
-> 发现有问题？欢迎加我微信一起探讨，或者直接提Issues
-> 无法下载或者下载太慢？可以直接找我要安装包；
-> 
-> 联系方式在这里的首页：https://www.cnblogs.com/LiangSenCheng/p/11083714.html
-
 ***温馨提醒***
 
 ***如需商用升级版，请联系我微信，微信二维码在这里的右上角： https://www.cnblogs.com/LiangSenCheng/p/11083714.html***
 
 > 本项目使用 `MIT License`协议，仅适用于学习交流，并且`不提供无偿的`、 `不提供无偿的`、 `不提供无偿的` 维护修改服务（但可提issue）。***若直接将本项目用于商用，因本项目带来的所有后果由使用者自行承担。***
 > 
+
+***在此奉劝某些人，请尊重作者的劳动成果，做人积点德吧！最近发现有人拿我的源码进行二次分发，不但不标注源码出处，甚至以此牟利。如果你花了钱购买本程序，请积极举报！***
+
+> 发现有问题？欢迎加我微信一起探讨，或者直接提Issues
+> 无法下载或者下载太慢？可以直接找我要安装包；
+> 
+> 联系方式在这里的首页：https://www.cnblogs.com/LiangSenCheng/p/11083714.html
 
 [![阿里云优惠活动](https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/blog20210228174209.jpg)](https://www.aliyun.com/activity/daily/bestoffer?userCode=sskuuw5n)
 
