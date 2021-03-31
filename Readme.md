@@ -24,7 +24,6 @@
 > 无法下载或者下载太慢？可以直接找我要安装包；
 > 
 > 联系方式在这里的首页：https://www.cnblogs.com/LiangSenCheng/p/11083714.html
-> 备用联系方式：https://blog-static.cnblogs.com/files/LiangSenCheng/wechat.gif
 
 [![阿里云优惠活动](https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/blog20210228174209.jpg)](https://www.aliyun.com/activity/daily/bestoffer?userCode=sskuuw5n)
 
