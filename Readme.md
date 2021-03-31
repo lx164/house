@@ -11,7 +11,9 @@
 
 ***温馨提醒***
 
-***如需商用升级版，请联系我微信，微信二维码在这里的右上角： https://www.cnblogs.com/LiangSenCheng/p/11083714.html***
+***如需商用升级版，请联系我微信，微信二维码在这里的右上角： https://www.cnblogs.com/LiangSenCheng/p/11083714.html*** 
+
+> 备用联系方式：[点击这里](https://blog-static.cnblogs.com/files/LiangSenCheng/wechat.gif)
 
 > 本项目使用 `MIT License`协议，仅适用于学习交流，并且`不提供无偿的`、 `不提供无偿的`、 `不提供无偿的` 维护修改服务（但可提issue）。***若直接将本项目用于商用，因本项目带来的所有后果由使用者自行承担。***
 > 
