@@ -32,6 +32,10 @@
 1. 表白墙 https://github.com/lx164/SayLove
 2. https://www.cnblogs.com/LiangSenCheng/p/12543230.html
 
+- [2021-04-06] 更新说明：
+
+最近有不少反馈说，为什么已经注册成功了，在首页还是一直弹窗提示要注册，这个问题是因为上个月微信改了授权规则了，这里的授权规则需要你自己修改一下。[官方具体公告请参考这里](https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801?blockType=1)
+
 - [2020-10-24] 更新说明：
 
 有反馈说，按照配置无法正常使用管理员，*请注意看配置过程第6步*；
