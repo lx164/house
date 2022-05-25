@@ -28,8 +28,6 @@
 > 
 > 联系方式在这里的首页：https://www.cnblogs.com/LiangSenCheng/p/11083714.html
 
-[![阿里云优惠活动](https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/blog20210228174209.jpg)](https://www.aliyun.com/activity/daily/bestoffer?userCode=sskuuw5n)
-
 - [其他开源项目]
 
 1. 表白墙 https://github.com/lx164/SayLove
@@ -182,7 +180,21 @@
 
 ## 界面预览
 
-<img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-01.png" style="margin-right:10px;" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-02.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-03.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-04.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-05.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-06.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-07.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-08.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-09.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-10.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-11.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-12.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-13.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-14.png" style="" width = "50%" alt="首页" align=center><img src="https://cdn.jsdelivr.net/gh/LiangSenCheng/blog-img/app/rent-house/water-15.png" style="" width = "50%" alt="首页" align=center>
+![water-01](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/b8f176576e685518616c7a786131d3e6.png)
+![water-02](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/6fc3206ed4d52914179ec43694ba0d62.png)
+![water-03](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/064e416adbee8b7382442187c6833dfb.png)
+![water-04](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/5477a22d419e0ff770be60823ae7e1fa.png)
+![water-05](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/df0c12df7528c2adef3d702397671124.png)
+![water-06](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/de534a06e30eabc874fe3d6f109de46e.png)
+![water-07](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/01e8f63ea6f4bba88f63a46412202afa.png)
+![water-08](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/1248bdcde60192b2df17332e9273db90.png)
+![water-09](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/878fd18bda8ae3fb49c3341d3fbb95e8.png)
+![water-10](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/762b67c8776c15222ba4a3035eee5e0b.png)
+![water-11](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/91fec8f301452eaf896bc09f712eab75.png)
+![water-12](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/f7ffd1a950e9a7ac98b8dad7d795bef4.png)
+![water-13](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/eafd1ef698647f696273da77c139a036.png)
+![water-14](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/c8d724db4867eea7f99fb80a3f33d4b2.png)
+![water-15](https://img-hello-world.oss-cn-beijing.aliyuncs.com/imgs/37a32b9c658d16fdee444d4891e758ec.png)
 
 ## 结语
 
